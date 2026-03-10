@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Kitchen en Chile | Cocinas para Delivery | Kitchen Hub</title>
+    <meta name="description"
+        content="Kitchen Hub conecta marcas gastronómicas con dark kitchens y cocinas para delivery disponibles en Santiago. Encuentra espacios profesionales listos para operar o publica tu cocina en la red.">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Kitchen Hub",
+      "url": "https://kitchenhub.cl",
+      "logo": "https://kitchenhub.cl/assets/logo_kitchen_lab.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hola@kitchenhub.cl",
+        "contactType": "customer service"
+      },
+      "additionalType": "marketplace de cocinas profesionales"
+    }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="./assets/logo_kitchen_lab.png" alt="Kitchen Hub Logo - Marketplace de Cocinas para Delivery"
+                    class="logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="#como-funciona">Cómo Funciona</a>
+                <a href="#cocinas-para-delivery">Explorar Cocinas</a>
+                <a href="#ventajas-dark-kitchen">Ventajas</a>
+                <a href="#contacto" class="btn btn-secondary">Hablar con un asesor</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content reveal">
+                <h1>Encuentra la <span class="gradient-text">dark kitchen ideal</span> para tu marca</h1>
+                <p>Kitchen Hub conecta marcas gastronómicas con cocinas profesionales listas para operar en zonas
+                    estratégicas de delivery.</p>
+                <div class="hero-actions">
+                    <a href="#cocinas-para-delivery" class="btn btn-primary">Explorar cocinas disponibles</a>
+                    <a href="#contacto" class="btn btn-secondary">Hablar con un asesor</a>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+                <div class="hero-image-wrapper">
+                    <img src="./assets/hero.jpg" alt="dark kitchen profesional en Santiago" class="hero-main-img">
+                    <div class="hero-image-overlay"></div>
+                </div>
+                <!-- Abstract tech representations -->
+                <div class="tech-card tc-1">
+                    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px;">Ubicación:
+                        Providencia</div>
+                    <div style="font-weight: 600; font-size: 1.1rem;">Hub Central 04</div>
+                    <div class="tc-metrics">
+                        <div class="tc-metric active"></div>
+                        <div class="tc-metric"></div>
+                    </div>
+                </div>
+                <div class="tech-card tc-2">
+                    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px;">Demanda de
+                        Delivery</div>
+                    <div style="font-weight: 600; font-size: 1.1rem; color: #10B981;">+45% en la zona</div>
+                    <div class="tc-metrics">
+                        <div class="tc-metric active" style="width: 80%; background: #10B981;"></div>
+                    </div>
+                </div>
+                <div class="tech-card tc-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Intro Paragraph -->
+    <section class="section" style="padding-top: 40px; padding-bottom: 20px;">
+        <div class="container reveal">
+            <p
+                style="text-align: center; max-width: 900px; margin: 0 auto; color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">
+                Kitchen Hub es una plataforma especializada en dark kitchens que conecta operadores de cocinas
+                profesionales con marcas gastronómicas que buscan espacios listos para delivery. Nuestro marketplace
+                permite descubrir cocinas ocultas disponibles, evaluar sus características y encontrar rápidamente una
+                cocina adecuada para lanzar o expandir un negocio gastronómico enfocado en delivery.
+            </p>
+        </div>
+    </section>
+
+    <!-- Brands Logo Marquee -->
+    <section class="brands-section reveal">
+        <div class="container">
+            <h3 class="section-subtitle"
+                style="margin-bottom: 32px; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; text-align: center; color: var(--text-secondary);">
+                Marcas que ya operan en la red
+            </h3>
+            <div class="brands-container">
+                <div class="brands-track">
+                    <!-- Original List -->
+                    <img src="./assets/marcas/chicken_love_you.png" alt="Chicken Love You" class="brand-logo">
+                    <img src="./assets/marcas/paletas.png" alt="Paletas" class="brand-logo">
+                    <img src="./assets/marcas/take_a_wok.png" alt="Take a Wok" class="brand-logo">
+                    <img src="./assets/marcas/umami.png" alt="Umami Nikkei" class="brand-logo">
+                    <img src="./assets/marcas/china_wook.png" alt="China Wook" class="brand-logo">
+                    <img src="./assets/marcas/noah_sushi.webp" alt="Noah Sushi" class="brand-logo">
+                    <img src="./assets/marcas/tommy_beans.webp" alt="Tommy Beans" class="brand-logo">
+                    <img src="./assets/marcas/under_pizza.png" alt="Under Pizza" class="brand-logo">
+                    <img src="./assets/marcas/la_burguesia.png" alt="La Burguesía" class="brand-logo">
+                    <img src="./assets/marcas/la_ensaladeria.png" alt="La Ensaladería" class="brand-logo">
+
+                    <!-- Duplicate List for seamless scrolling -->
+                    <img src="./assets/marcas/chicken_love_you.png" alt="Chicken Love You" class="brand-logo">
+                    <img src="./assets/marcas/paletas.png" alt="Paletas" class="brand-logo">
+                    <img src="./assets/marcas/take_a_wok.png" alt="Take a Wok" class="brand-logo">
+                    <img src="./assets/marcas/umami.png" alt="Umami Nikkei" class="brand-logo">
+                    <img src="./assets/marcas/china_wook.png" alt="China Wook" class="brand-logo">
+                    <img src="./assets/marcas/noah_sushi.webp" alt="Noah Sushi" class="brand-logo">
+                    <img src="./assets/marcas/tommy_beans.webp" alt="Tommy Beans" class="brand-logo">
+                    <img src="./assets/marcas/under_pizza.png" alt="Under Pizza" class="brand-logo">
+                    <img src="./assets/marcas/la_burguesia.png" alt="La Burguesía" class="brand-logo">
+                    <img src="./assets/marcas/la_ensaladeria.png" alt="La Ensaladería" class="brand-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="como-funciona" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Cómo funciona</h2>
+            <p class="section-subtitle reveal">Tres pasos simples para comenzar a operar en una dark kitchen.</p>
+
+            <div class="steps-grid">
+                <div class="step-card reveal">
+                    <div class="step-icon"><i data-lucide="map-pin"></i></div>
+                    <h3>Cuéntanos sobre tu marca</h3>
+                    <p>Comparte información básica sobre tu negocio gastronómico, tipo de cocina y necesidades de
+                        producción.</p>
+                </div>
+                <div class="step-card reveal" style="transition-delay: 100ms;">
+                    <div class="step-icon"><i data-lucide="chef-hat"></i></div>
+                    <h3>Te recomendamos las mejores opciones</h3>
+                    <p>Nuestro equipo y asistente inteligente te mostrarán las cocinas disponibles que mejor se adapten
+                        a tu operación.</p>
+                </div>
+                <div class="step-card reveal" style="transition-delay: 200ms;">
+                    <div class="step-icon"><i data-lucide="calendar-check"></i></div>
+                    <h3>Agenda visita y comienza a producir</h3>
+                    <p>Coordina una visita, firma el contrato y comienza a operar en una cocina profesional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Kitchens -->
+    <section id="cocinas-para-delivery" class="section kitchens-section">
+        <div class="container">
+            <h2 class="section-title reveal">Cocinas para delivery disponibles</h2>
+            <p class="section-subtitle reveal">Espacios de alto rendimiento listos para tu marca.</p>
+
+            <div class="kitchen-grid">
+                <!-- Card 1: Vitacura -->
+                <div class="kitchen-card reveal">
+                    <img src="./assets/modulo_1_vitacura.jpg" alt="cocina para delivery equipada en Vitacura"
+                        class="sr-only" style="display:none;">
+                    <div class="kitchen-img"
+                        style="background-image: url('./assets/modulo_1_vitacura.jpg'); background-size: cover; background-position: center;">
+                        <div class="badge-location"><i data-lucide="map-pin" style="width: 14px; height: 14px;"></i>
+                            Vitacura</div>
+                    </div>
+                    <div class="kitchen-info">
+                        <h3>Kitchen Hub Vitacura</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9375rem; margin-bottom: 16px;">Módulos
+                            disponibles para operación gastronómica inmediata.</p>
+                        <div class="kitchen-specs">
+                            <div class="spec-item"><i data-lucide="maximize" style="width: 16px; height: 16px;"></i> 11
+                                m²</div>
+                            <div class="spec-item"><i data-lucide="maximize" style="width: 16px; height: 16px;"></i>
+                                12,35 m²</div>
+                            <div class="spec-item"
+                                style="color: #10B981; border-color: rgba(16, 185, 129, 0.2); background: rgba(16, 185, 129, 0.1);">
+                                <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10B981;"></i>
+                                Disponible
+                            </div>
+                        </div>
+                        <ul
+                            style="margin-bottom: 24px; color: var(--text-secondary); font-size: 0.875rem; display: flex; flex-direction: column; gap: 8px;">
+                            <li>• Extracción independiente</li>
+                            <li>• Energía monofásica y trifásica</li>
+                        </ul>
+                        <button class="btn btn-details" data-modal="modal-vitacura">Ver detalles</button>
+                    </div>
+                </div>
+                <!-- Card 2: Las Condes -->
+                <div class="kitchen-card reveal" style="transition-delay: 100ms;">
+                    <img src="./assets/modulo_las_condes.jpg"
+                        alt="infraestructura de dark kitchen moderna en Las Condes" class="sr-only"
+                        style="display:none;">
+                    <div class="kitchen-img"
+                        style="background-image: url('./assets/modulo_las_condes.jpg'); background-size: cover; background-position: center;">
+                        <div class="badge-location"><i data-lucide="map-pin" style="width: 14px; height: 14px;"></i> Las
+                            Condes</div>
+                    </div>
+                    <div class="kitchen-info">
+                        <h3>Kitchen Hub Las Condes</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9375rem; margin-bottom: 16px;">Espacio
+                            diseñado para marcas gastronómicas en crecimiento.</p>
+                        <div class="kitchen-specs">
+                            <div class="spec-item"><i data-lucide="maximize" style="width: 16px; height: 16px;"></i>
+                                16,25 m²</div>
+                            <div class="spec-item"
+                                style="color: #10B981; border-color: rgba(16, 185, 129, 0.2); background: rgba(16, 185, 129, 0.1);">
+                                <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10B981;"></i>
+                                Disponible
+                            </div>
+                        </div>
+                        <ul
+                            style="margin-bottom: 24px; color: var(--text-secondary); font-size: 0.875rem; display: flex; flex-direction: column; gap: 8px;">
+                            <li>• Campana de acero inoxidable</li>
+                            <li>• Trampa de grasa instalada</li>
+                        </ul>
+                        <button class="btn btn-details" data-modal="modal-las-condes">Ver detalles</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Infraestructura para dark kitchens profesionales</h2>
+            <p class="section-subtitle reveal">Todo lo técnico y operativo resuelto para que te concentres en producir y
+                vender.</p>
+
+            <div class="features-grid">
+                <!-- Card 1 -->
+                <div class="feature-item reveal">
+                    <div class="feature-icon"><i data-lucide="wind"></i></div>
+                    <div>
+                        <h4>Sistema de extracción profesional</h4>
+                        <p>Campanas de acero inoxidable con motores independientes y ductos certificados al exterior,
+                            cumpliendo normativa sanitaria vigente.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="feature-item reveal" style="transition-delay: 50ms;">
+                    <div class="feature-icon"><i data-lucide="droplet"></i></div>
+                    <div>
+                        <h4>Lavaplatos y lavafondos industriales</h4>
+                        <p>Instalaciones sanitarias completas con agua caliente y puntos de lavado diseñados para
+                            operaciones gastronómicas intensivas.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="feature-item reveal" style="transition-delay: 100ms;">
+                    <div class="feature-icon"><i data-lucide="recycle"></i></div>
+                    <div>
+                        <h4>Gestión de residuos y reciclaje</h4>
+                        <p>Sistema organizado de retiro de basura, separación de residuos y reciclaje para mantener la
+                            operación limpia y ordenada.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="feature-item reveal" style="transition-delay: 150ms;">
+                    <div class="feature-icon"><i data-lucide="droplets"></i></div>
+                    <div>
+                        <h4>Retiro de aceite usado</h4>
+                        <p>Gestión periódica de retiro de aceite de fritura mediante proveedores especializados que
+                            cumplen normas sanitarias y ambientales.</p>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="feature-item reveal" style="transition-delay: 200ms;">
+                    <div class="feature-icon"><i data-lucide="zap"></i></div>
+                    <div>
+                        <h4>Matriz eléctrica y gas normada</h4>
+                        <p>Capacidad eléctrica monofásica y trifásica junto a conexiones de gas certificadas, listas
+                            para equipamiento gastronómico.</p>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="feature-item reveal" style="transition-delay: 250ms;">
+                    <div class="feature-icon"><i data-lucide="truck"></i></div>
+                    <div>
+                        <h4>Logística y operación del hub</h4>
+                        <p>Áreas de carga y descarga, flujo eficiente para riders de delivery y servicio de runner que
+                            facilita la salida de pedidos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages / Growth Section -->
+    <section id="ventajas" class="section growth-section">
+        <!-- Video Background -->
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="./assets/growth_video_bg.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+
+        <div class="container growth-container">
+            <div class="growth-header reveal">
+                <h2 class="section-title">Ventajas de operar en una dark kitchen</h2>
+                <p class="section-subtitle">Las dark kitchens permiten lanzar o expandir una marca gastronómica con
+                    menos inversión, mayor velocidad y una operación optimizada.</p>
+            </div>
+
+            <div class="growth-grid">
+                <!-- Card 1 -->
+                <div class="growth-card reveal">
+                    <div class="growth-icon"><i data-lucide="piggy-bank"></i></div>
+                    <div class="growth-content">
+                        <h4>Menor inversión inicial</h4>
+                        <p>Evita los altos costos de habilitar un restaurante tradicional.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="growth-card reveal" style="transition-delay: 100ms;">
+                    <div class="growth-icon"><i data-lucide="rocket"></i></div>
+                    <div class="growth-content">
+                        <h4>Apertura rápida</h4>
+                        <p>Comienza a producir en días en lugar de meses.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="growth-card reveal" style="transition-delay: 200ms;">
+                    <div class="growth-icon"><i data-lucide="map-pinned"></i></div>
+                    <div class="growth-content">
+                        <h4>Ubicación estratégica para delivery</h4>
+                        <p>Opera desde zonas con alta demanda de pedidos.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="growth-card reveal" style="transition-delay: 300ms;">
+                    <div class="growth-icon"><i data-lucide="trending-up"></i></div>
+                    <div class="growth-content">
+                        <h4>Modelo escalable</h4>
+                        <p>Expande tu producción a múltiples cocinas según crece tu marca.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant -->
+    <section class="section ai-section">
+        <div class="container reveal">
+            <div class="ai-card">
+                <div class="ai-content">
+                    <div class="bot-icon"><i data-lucide="bot"></i></div>
+                    <h2>Encuentra tu cocina ideal con IA</h2>
+                    <p style="color: var(--text-secondary); margin: 24px 0 40px; font-size: 1.125rem;">Nuestro asistente
+                        inteligente analiza tus requerimientos, tipo de menú y presupuesto para conectarte con el mejor
+                        espacio en segundos.</p>
+                    <button class="btn btn-gradient btn-lg" style="padding: 16px 40px; font-size: 1.125rem;">
+                        <i data-lucide="sparkles"></i> Iniciar asistente IA
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: CAPTACIÓN DE OPERADORES (Brokerage) -->
+    <section class="section cta-publish" style="background: var(--bg-surface-elevated); padding-bottom: 80px;">
+        <div class="container reveal">
+            <div class="growth-header" style="margin-bottom: 40px;">
+                <h2 class="section-title">¿Tienes una dark kitchen disponible?</h2>
+                <p class="section-subtitle" style="margin-bottom: 40px;">Publica tu espacio en Kitchen Hub y conecta con
+                    marcas gastronómicas que buscan cocinas listas para operar. Nuestro sistema de exposición digital y
+                    recomendación inteligente ayuda a encontrar al arrendatario más adecuado para tu espacio.</p>
+            </div>
+
+            <div class="features-grid"
+                style="margin-bottom: 40px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <!-- Benefit 1 -->
+                <div class="feature-item reveal bg-surface">
+                    <div class="feature-icon" style="background: rgba(227, 6, 19, 0.1); color: var(--primary);"><i
+                            data-lucide="globe"></i></div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Mayor exposición digital</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Tu cocina aparece frente a marcas
+                            gastronómicas activas que buscan espacios para operar.</p>
+                    </div>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="feature-item reveal bg-surface" style="transition-delay: 100ms;">
+                    <div class="feature-icon" style="background: rgba(227, 6, 19, 0.1); color: var(--primary);"><i
+                            data-lucide="git-merge"></i></div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Matching inteligente</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Nuestro sistema ayuda a conectar
+                            cada cocina con el tipo de marca más compatible.</p>
+                    </div>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="feature-item reveal bg-surface" style="transition-delay: 200ms;">
+                    <div class="feature-icon" style="background: rgba(227, 6, 19, 0.1); color: var(--primary);"><i
+                            data-lucide="zap"></i></div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Proceso comercial más eficiente</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Centralizamos la captación de leads
+                            y la presentación de tu espacio.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <button class="btn btn-primary" style="padding: 16px 32px; font-size: 1.1rem;"
+                    data-modal="modal-publish">
+                    <i data-lucide="building-2"></i> Publicar mi espacio
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: CONTACT / SOCIAL AREA -->
+    <section id="contacto" class="section contact-section">
+        <div class="container contact-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+            <div class="contact-info reveal">
+                <h2 style="font-size: 2.5rem; margin-bottom: 16px;">¿Listo para encontrar tu próxima cocina?</h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 40px;">Déjanos tus datos y un
+                    asesor gastronómico te ayudará a encontrar el espacio ideal para tu operación.</p>
+
+                <div style="display: flex; flex-direction: column; gap: 24px; margin-bottom: 40px;">
+                    <div
+                        style="display: flex; gap: 16px; align-items: center; color: var(--text-secondary); font-size: 1.1rem;">
+                        <i data-lucide="mail" style="color: var(--primary);"></i> hola@kitchenhub.cl
+                    </div>
+                    <div
+                        style="display: flex; gap: 16px; align-items: center; color: var(--text-secondary); font-size: 1.1rem;">
+                        <i data-lucide="phone" style="color: var(--primary);"></i> <span class="contenteditable-field"
+                            contenteditable="true" data-placeholder="[Ingresar WhatsApp]">+56 9 XXXX XXXX</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: auto;">
+                    <p style="color: var(--text-secondary); margin-bottom: 16px; font-weight: 500;">Síguenos para
+                        conocer nuevos espacios disponibles, aperturas y oportunidades dentro de la red Kitchen Hub.</p>
+                    <div style="display: flex; gap: 16px;">
+                        <a href="#"
+                            style="color: var(--text-secondary); background: rgba(255,255,255,0.05); padding: 12px; border-radius: 50%; transition: var(--transition); display: flex; align-items: center; justify-content: center;"
+                            onmouseover="this.style.color='var(--primary)'; this.style.background='rgba(227,6,19,0.1)'"
+                            onmouseout="this.style.color='var(--text-secondary)'; this.style.background='rgba(255,255,255,0.05)'"><i
+                                data-lucide="instagram"></i></a>
+                        <a href="#"
+                            style="color: var(--text-secondary); background: rgba(255,255,255,0.05); padding: 12px; border-radius: 50%; transition: var(--transition); display: flex; align-items: center; justify-content: center;"
+                            onmouseover="this.style.color='var(--primary)'; this.style.background='rgba(227,6,19,0.1)'"
+                            onmouseout="this.style.color='var(--text-secondary)'; this.style.background='rgba(255,255,255,0.05)'"><i
+                                data-lucide="linkedin"></i></a>
+                        <a href="#"
+                            style="color: var(--text-secondary); background: rgba(255,255,255,0.05); padding: 12px; border-radius: 50%; transition: var(--transition); display: flex; align-items: center; justify-content: center;"
+                            onmouseover="this.style.color='var(--primary)'; this.style.background='rgba(227,6,19,0.1)'"
+                            onmouseout="this.style.color='var(--text-secondary)'; this.style.background='rgba(255,255,255,0.05)'"><i
+                                data-lucide="youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-container reveal">
+                <form id="contactForm" class="contact-form"
+                    style="background: var(--bg-surface-elevated); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05);">
+                    <div class="form-group">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" id="name" class="form-control" placeholder="Ej. Juan Pérez" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" class="form-control" placeholder="juan@tumarca.cl" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono (WhatsApp)</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="+56 9 XXXX XXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bizType">Tipo de negocio gastronómico</label>
+                        <select id="bizType" class="form-control" required>
+                            <option value="">Selecciona un rubro</option>
+                            <option value="sushi">Sushi / Nikkei</option>
+                            <option value="burger">Hamburguesas / Fast Food</option>
+                            <option value="pizza">Pizzas</option>
+                            <option value="vegan">Comida Saludable / Vegana</option>
+                            <option value="other">Otro</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 16px;">Quiero
+                        encontrar una cocina</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <img src="./assets/logo_kitchen_lab.png" alt="Kitchen Hub Logo" class="logo-img"
+                        style="height: 64px;">
+                </div>
+                <div class="footer-links">
+                    <a href="terminos-y-condiciones.html">Términos y condiciones</a>
+                    <a href="politica-de-privacidad.html">Políticas de privacidad</a>
+                    <a href="#">Operadores</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Kitchen Hub Tech. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Modal: Vitacura -->
+    <div id="modal-vitacura" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Kitchen Hub Vitacura</h2>
+                <p class="modal-subtitle">Módulos disponibles para marcas gastronómicas que buscan operar con rapidez y
+                    respaldo operativo.</p>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3><i data-lucide="info"></i> Información general</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Dirección</span>
+                            <span class="info-value">Geronimo de Alderete #1121</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Horario de funcionamiento</span>
+                            <span class="info-value">09:00 a 23:00</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Estado</span>
+                            <span class="badge badge-success">Disponible</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i data-lucide="layout-grid"></i> Módulos disponibles</h3>
+                    <div class="modules-list">
+                        <div class="module-card">
+                            <h4>Módulo 1</h4>
+                            <div class="module-specs">
+                                <span><i data-lucide="maximize"></i> Superficie: 11 m²</span>
+                                <span class="badge badge-success">Estado: Disponible</span>
+                            </div>
+                        </div>
+                        <div class="module-card">
+                            <h4>Módulo 2</h4>
+                            <div class="module-specs">
+                                <span><i data-lucide="maximize"></i> Superficie: 12,35 m²</span>
+                                <span class="badge badge-success">Estado: Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i data-lucide="package"></i> Cada módulo de cocina incluye</h3>
+                    <ul class="features-list">
+                        <li><i data-lucide="check"></i> Electricidad monofásica y trifásica</li>
+                        <li><i data-lucide="check"></i> Sistema de extracción de aire</li>
+                        <li><i data-lucide="check"></i> Campana de acero inoxidable</li>
+                        <li><i data-lucide="check"></i> Trampa de grasa</li>
+                        <li><i data-lucide="check"></i> Lavamanos</li>
+                        <li><i data-lucide="check"></i> Lavafondos</li>
+                        <li><i data-lucide="check"></i> Punto de red</li>
+                        <li><i data-lucide="check"></i> Citofonía</li>
+                    </ul>
+                </div>
+
+                <div class="modal-grid-2">
+                    <div class="modal-section">
+                        <h3><i data-lucide="users"></i> Operación</h3>
+                        <ul class="features-list">
+                            <li><i data-lucide="check"></i> Zona de Check Out</li>
+                            <li><i data-lucide="check"></i> Runner</li>
+                            <li><i data-lucide="check"></i> Personal dedicado</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <h3><i data-lucide="shield-check"></i> Seguridad</h3>
+                        <ul class="features-list">
+                            <li><i data-lucide="check"></i> Sistema de alarma</li>
+                            <li><i data-lucide="check"></i> Cámaras de seguridad</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i data-lucide="wrench"></i> Mantención</h3>
+                    <ul class="features-list">
+                        <li><i data-lucide="check"></i> Limpieza de baños</li>
+                        <li><i data-lucide="check"></i> Limpieza de zonas comunes</li>
+                        <li><i data-lucide="check"></i> Fumigación y control de plagas mensual</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <a href="#contacto" class="btn btn-secondary close-modal-btn">Solicitar información</a>
+                <a href="#contacto" class="btn btn-primary close-modal-btn">Agendar visita</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Las Condes -->
+    <div id="modal-las-condes" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Kitchen Hub Las Condes</h2>
+                <p class="modal-subtitle">Cocina profesional disponible para marcas gastronómicas listas para operar.
+                </p>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3><i data-lucide="info"></i> Información general</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Dirección</span>
+                            <span class="info-value contenteditable-field" contenteditable="true"
+                                data-placeholder="[Ingresar dirección]">[dejar campo editable]</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Horario de funcionamiento</span>
+                            <span class="info-value contenteditable-field" contenteditable="true"
+                                data-placeholder="[Ingresar horario]">[dejar campo editable]</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Estado</span>
+                            <span class="badge badge-success">Disponible</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i data-lucide="layout-grid"></i> Módulos disponibles</h3>
+                    <div class="modules-list">
+                        <div class="module-card">
+                            <h4>Módulo 3</h4>
+                            <div class="module-specs">
+                                <span><i data-lucide="maximize"></i> Superficie: 16,25 m²</span>
+                                <span class="badge badge-success">Estado: Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i data-lucide="package"></i> Cada módulo de cocina incluye</h3>
+                    <ul class="features-list">
+                        <li><i data-lucide="check"></i> Electricidad monofásica y trifásica</li>
+                        <li><i data-lucide="check"></i> Sistema de extracción de aire</li>
+                        <li><i data-lucide="check"></i> Campana de acero inoxidable</li>
+                        <li><i data-lucide="check"></i> Trampa de grasa</li>
+                        <li><i data-lucide="check"></i> Lavamanos</li>
+                        <li><i data-lucide="check"></i> Lavafondos</li>
+                        <li><i data-lucide="check"></i> Punto de red</li>
+                        <li><i data-lucide="check"></i> Citofonía</li>
+                    </ul>
+                </div>
+
+                <div class="modal-grid-2">
+                    <div class="modal-section">
+                        <h3><i data-lucide="users"></i> Operación</h3>
+                        <ul class="features-list">
+                            <li><i data-lucide="check"></i> Zona de Check Out</li>
+                            <li><i data-lucide="check"></i> Runner</li>
+                            <li><i data-lucide="check"></i> Personal dedicado</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <h3><i data-lucide="shield-check"></i> Seguridad</h3>
+                        <ul class="features-list">
+                            <li><i data-lucide="check"></i> Sistema de alarma</li>
+                            <li><i data-lucide="check"></i> Cámaras de seguridad</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i data-lucide="wrench"></i> Mantención</h3>
+                    <ul class="features-list">
+                        <li><i data-lucide="check"></i> Limpieza de baños</li>
+                        <li><i data-lucide="check"></i> Limpieza de zonas comunes</li>
+                        <li><i data-lucide="check"></i> Fumigación y control de plagas mensual</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <a href="#contacto" class="btn btn-secondary close-modal-btn">Solicitar información</a>
+                <a href="#contacto" class="btn btn-primary close-modal-btn">Agendar visita</a>
+            </div>
+        </div>
+    </div>
+    <!-- Modal: Publicar Espacio (Brokerage) -->
+    <div id="modal-publish" class="modal">
+        <div class="modal-content" style="max-width: 800px;">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Publica tu dark kitchen en Kitchen Hub</h2>
+                <p class="modal-subtitle">Completa la información básica de tu espacio y nuestro equipo evaluará su
+                    incorporación a la red.</p>
+            </div>
+
+            <div class="modal-body">
+                <form id="publishForm" class="contact-form">
+
+                    <!-- Información general -->
+                    <div class="modal-section" style="margin-bottom: 32px;">
+                        <h3
+                            style="margin-bottom: 24px; color: var(--text-primary); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
+                            <i data-lucide="user"></i> Información general
+                        </h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div class="form-group">
+                                <label>Nombre del operador o empresa</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Nombre del espacio o hub</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Nombre de contacto</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group" style="grid-column: span 2;">
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                                    <div>
+                                        <label>Correo electrónico</label>
+                                        <input type="email" class="form-control" required>
+                                    </div>
+                                    <div>
+                                        <label>Teléfono / WhatsApp</label>
+                                        <input type="tel" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ubicación -->
+                    <div class="modal-section" style="margin-bottom: 32px;">
+                        <h3
+                            style="margin-bottom: 24px; color: var(--text-primary); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
+                            <i data-lucide="map-pin"></i> Ubicación
+                        </h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div class="form-group" style="grid-column: span 2;">
+                                <label>Dirección exacta</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Comuna</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Ciudad</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group" style="grid-column: span 2;">
+                                <label>Referencia de acceso (opcional)</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Características del espacio -->
+                    <div class="modal-section" style="margin-bottom: 32px;">
+                        <h3
+                            style="margin-bottom: 24px; color: var(--text-primary); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
+                            <i data-lucide="layout-grid"></i> Características del espacio
+                        </h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div class="form-group">
+                                <label>Cantidad de módulos disponibles</label>
+                                <input type="number" class="form-control" min="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Superficie de cada módulo (m²)</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Valor de arriendo aproximado</label>
+                                <input type="text" class="form-control" placeholder="Ej. $800.000 CLP" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Gastos comunes / adicionales</label>
+                                <input type="text" class="form-control" placeholder="Ej. $150.000 CLP" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Estado de disponibilidad</label>
+                                <select class="form-control" required>
+                                    <option value="">Selecciona disponibilidad</option>
+                                    <option value="inmediata">Inmediata</option>
+                                    <option value="futura">Futura (en construcción)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Tipo de energía</label>
+                                <select class="form-control" required>
+                                    <option value="">Selecciona energía</option>
+                                    <option value="monofasica">Monofásica</option>
+                                    <option value="trifasica">Trifásica</option>
+                                    <option value="ambas">Ambas</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="grid-column: span 2;">
+                                <label>Tipo de gas disponible</label>
+                                <select class="form-control" required>
+                                    <option value="">Selecciona gas</option>
+                                    <option value="natural">Gas Natural</option>
+                                    <option value="licuado">Gas Licuado</option>
+                                    <option value="no_disponible">No disponible / Solo eléctrico</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Equipamiento e infraestructura -->
+                    <div class="modal-section" style="margin-bottom: 32px;">
+                        <h3
+                            style="margin-bottom: 24px; color: var(--text-primary); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
+                            <i data-lucide="wrench"></i> Equipamiento e infraestructura
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">Selecciona los
+                            elementos con los que cuenta el espacio:</p>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                            <label
+                                style="display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
+                                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                Sistema de extracción
+                            </label>
+                            <label
+                                style="display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
+                                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                Campana de acero inoxidable
+                            </label>
+                            <label
+                                style="display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
+                                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                Trampa de grasa
+                            </label>
+                            <label
+                                style="display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
+                                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                Lavamanos y/o Lavafondos
+                            </label>
+                            <label
+                                style="display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
+                                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                Área de carga y descarga
+                            </label>
+                            <label
+                                style="display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
+                                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                Espacio para riders
+                            </label>
+                            <label
+                                style="display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
+                                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                Baños y áreas comunes
+                            </label>
+                            <label
+                                style="display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
+                                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                Cámaras de seguridad / Alarma
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Condiciones de operación -->
+                    <div class="modal-section" style="margin-bottom: 32px;">
+                        <h3
+                            style="margin-bottom: 24px; color: var(--text-primary); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
+                            <i data-lucide="clipboard-list"></i> Condiciones de operación
+                        </h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div class="form-group" style="grid-column: span 2;">
+                                <label>Horario de funcionamiento</label>
+                                <input type="text" class="form-control" placeholder="Ej. Lunes a Domingo 09:00 a 23:00"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label>Requisitos para arrendar</label>
+                                <input type="text" class="form-control" placeholder="Ej. Mes de garantía, Dicom, etc.">
+                            </div>
+                            <div class="form-group">
+                                <label>Plazo mínimo de contrato</label>
+                                <select class="form-control">
+                                    <option value="6">6 meses</option>
+                                    <option value="12">12 meses</option>
+                                    <option value="24">24 meses o más</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="grid-column: span 2;">
+                                <label>Observaciones adicionales (opcional)</label>
+                                <textarea class="form-control" rows="3"
+                                    placeholder="Detalles extra sobre el espacio o proceso"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Archivos -->
+                    <div class="modal-section" style="margin-bottom: 32px;">
+                        <h3
+                            style="margin-bottom: 24px; color: var(--text-primary); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
+                            <i data-lucide="paperclip"></i> Archivos adjuntos
+                        </h3>
+                        <div class="form-group">
+                            <label>Sube fotos del espacio</label>
+                            <div style="border: 2px dashed rgba(255,255,255,0.2); border-radius: 12px; padding: 24px; text-align: center; color: var(--text-secondary); cursor: pointer; transition: var(--transition);"
+                                onmouseover="this.style.borderColor='var(--primary)'; this.style.color='var(--text-primary)';"
+                                onmouseout="this.style.borderColor='rgba(255,255,255,0.2)'; this.style.color='var(--text-secondary)';">
+                                <i data-lucide="upload-cloud" style="margin-bottom: 8px;"></i>
+                                <p>Haz clic para subir imágenes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="modal-footer"
+                style="padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.05); gap: 16px; flex-direction: column;">
+                <div style="display: flex; gap: 16px; width: 100%;">
+                    <button type="submit" form="publishForm" class="btn btn-primary"
+                        style="flex: 1; justify-content: center; font-size: 1.1rem; padding: 16px;">Enviar
+                        publicación</button>
+                    <a href="#contacto" class="btn btn-secondary close-modal-btn"
+                        style="flex: 1; justify-content: center; font-size: 1.1rem; padding: 16px;">Agendar una
+                        llamada</a>
+                </div>
+                <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem; width: 100%;">Al enviar este
+                    formulario, nuestro equipo revisará la información para evaluar la incorporación del espacio a la
+                    red Kitchen Hub.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+
+</html>
