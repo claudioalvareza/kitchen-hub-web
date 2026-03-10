@@ -156,4 +156,184 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setupFormMock('contactForm');
     setupFormMock('publishForm');
+
+    // Custom AI Chat Widget Logic
+    const N8N_WEBHOOK_URL = "https://claudioalvareza.app.n8n.cloud/webhook/a9a0d5f2-f15e-42ae-a9b2-3287d3f9ec47/chat";
+    const toggleBtn = document.getElementById("kh-chat-toggle");
+    const panel = document.getElementById("kh-chat-panel");
+    const closeBtn = document.getElementById("kh-chat-close");
+    const chatForm = document.getElementById("kh-chat-form");
+    const chatInput = document.getElementById("kh-chat-input");
+    const messages = document.getElementById("kh-chat-messages");
+    const sendBtn = document.getElementById("kh-chat-send");
+    const quickActions = document.querySelectorAll(".kh-quick-action");
+
+    let sessionId = localStorage.getItem("kh_session_id");
+    if (!sessionId) {
+        sessionId = (window.crypto && crypto.randomUUID)
+            ? crypto.randomUUID()
+            : "kh-" + Date.now() + "-" + Math.random().toString(36).slice(2);
+        localStorage.setItem("kh_session_id", sessionId);
+    }
+
+    function togglePanel(forceOpen = null) {
+        if (!panel) return;
+        const shouldOpen = forceOpen !== null ? forceOpen : panel.classList.contains("kh-hidden");
+        panel.classList.toggle("kh-hidden", !shouldOpen);
+        if (shouldOpen && chatInput) {
+            setTimeout(() => chatInput.focus(), 50);
+        }
+    }
+
+    function appendMessage(text, sender = "bot", isHtml = false) {
+        const wrapper = document.createElement("div");
+        wrapper.className = `kh-msg kh-msg-${sender}`;
+
+        const bubble = document.createElement("div");
+        bubble.className = "kh-msg-bubble";
+
+        if (isHtml) {
+            bubble.innerHTML = text;
+        } else {
+            bubble.textContent = text;
+        }
+
+        wrapper.appendChild(bubble);
+        messages.appendChild(wrapper);
+        messages.scrollTop = messages.scrollHeight;
+        return wrapper;
+    }
+
+    function addTyping() {
+        const typingNode = appendMessage(
+            '<span class="kh-typing"><span></span><span></span><span></span></span>',
+            "bot",
+            true
+        );
+        typingNode.dataset.typing = "true";
+        return typingNode;
+    }
+
+    function removeTyping() {
+        const typing = messages.querySelector('[data-typing="true"]');
+        if (typing) typing.remove();
+    }
+
+    function extractBotText(payload) {
+        if (!payload) return "No pude procesar la respuesta.";
+        if (typeof payload === "string") return payload;
+
+        if (payload.output) return payload.output;
+        if (payload.response) return payload.response;
+        if (payload.reply) return payload.reply;
+        if (payload.message) return payload.message;
+        if (payload.text) return payload.text;
+
+        if (Array.isArray(payload) && payload.length > 0) {
+            return extractBotText(payload[0]);
+        }
+
+        if (payload.data) {
+            return extractBotText(payload.data);
+        }
+
+        return JSON.stringify(payload, null, 2);
+    }
+
+    async function sendMessage(message) {
+        appendMessage(message, "user");
+        sendBtn.disabled = true;
+        chatInput.disabled = true;
+
+        addTyping();
+
+        try {
+            const response = await fetch(N8N_WEBHOOK_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    message: message,
+                    sessionId: sessionId,
+                    source: "kitchenhub-web",
+                    timestamp: new Date().toISOString()
+                })
+            });
+
+            const contentType = response.headers.get("content-type") || "";
+
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+
+            let payload;
+            if (contentType.includes("application/json")) {
+                payload = await response.json();
+            } else {
+                payload = await response.text();
+            }
+
+            removeTyping();
+            appendMessage(extractBotText(payload), "bot");
+        } catch (error) {
+            removeTyping();
+            appendMessage(
+                "Hubo un problema al conectar con el asistente. Intenta nuevamente en unos segundos.",
+                "bot"
+            );
+            console.error("Kitchen Hub chat error:", error);
+        } finally {
+            sendBtn.disabled = false;
+            chatInput.disabled = false;
+            chatInput.focus();
+            messages.scrollTop = messages.scrollHeight;
+        }
+    }
+
+    if (toggleBtn) toggleBtn.addEventListener("click", () => togglePanel());
+    if (closeBtn) closeBtn.addEventListener("click", () => togglePanel(false));
+
+    if (chatForm) {
+        chatForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const message = chatInput.value.trim();
+            if (!message) return;
+            chatInput.value = "";
+            await sendMessage(message);
+        });
+    }
+
+    quickActions.forEach((btn) => {
+        btn.addEventListener("click", async () => {
+            const message = btn.dataset.message;
+            await sendMessage(message);
+        });
+    });
+
+    // Trigger buttons from website
+    const chatTriggerBtns = document.querySelectorAll('.chat-trigger-btn');
+    chatTriggerBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Close any open modals
+            const openModal = btn.closest('.modal');
+            if (openModal) {
+                closeModal(openModal);
+            }
+            togglePanel(true);
+        });
+    });
+
+    // Scroll trigger (below hero section)
+    let chatOpenedOnce = false;
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+        window.addEventListener('scroll', () => {
+            if (!chatOpenedOnce && window.scrollY > heroSection.offsetHeight) {
+                togglePanel(true);
+                chatOpenedOnce = true;
+            }
+        });
+    }
 });
