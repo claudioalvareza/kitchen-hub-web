@@ -439,7 +439,7 @@
 
     <!-- Section 2: CONTACT / SOCIAL AREA -->
     <section id="contacto" class="section contact-section">
-        <div class="container contact-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+        <div class="container contact-wrapper">
             <div class="contact-info reveal">
                 <h2 style="font-size: 2.5rem; margin-bottom: 16px;">¿Listo para encontrar tu próxima cocina?</h2>
                 <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 40px;">Déjanos tus datos y un
@@ -759,7 +759,7 @@
                             style="margin-bottom: 24px; color: var(--text-primary); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
                             <i data-lucide="user"></i> Información general
                         </h3>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div class="grid-2-cols">
                             <div class="form-group">
                                 <label>Nombre del operador o empresa</label>
                                 <input type="text" name="nombre_vendedor" class="form-control" required>
@@ -773,7 +773,7 @@
                                 <input type="text" name="contacto_vendedor" class="form-control" required>
                             </div>
                             <div class="form-group" style="grid-column: span 2;">
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                                <div class="grid-2-cols">
                                     <div>
                                         <label>Correo electrónico</label>
                                         <input type="email" name="email_vendedor" class="form-control" required>
@@ -793,7 +793,7 @@
                             style="margin-bottom: 24px; color: var(--text-primary); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
                             <i data-lucide="map-pin"></i> Ubicación
                         </h3>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div class="grid-2-cols">
                             <div class="form-group" style="grid-column: span 2;">
                                 <label>Dirección exacta</label>
                                 <input type="text" name="direccion" class="form-control" required>
@@ -819,7 +819,7 @@
                             style="margin-bottom: 24px; color: var(--text-primary); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
                             <i data-lucide="layout-grid"></i> Características del espacio
                         </h3>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div class="grid-2-cols">
                             <div class="form-group">
                                 <label>Cantidad de módulos disponibles</label>
                                 <input type="number" name="cantidad_modulos" class="form-control" min="1" required>
@@ -876,7 +876,7 @@
                         <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">Selecciona los
                             elementos con los que cuenta el espacio:</p>
 
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <div class="grid-2-cols gap-sm">
                             <label
                                 style="display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
                                 <input type="checkbox" name="equipamiento_incluido[]" value="Sistema de extracción"
@@ -936,7 +936,7 @@
                             style="margin-bottom: 24px; color: var(--text-primary); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
                             <i data-lucide="clipboard-list"></i> Condiciones de operación
                         </h3>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div class="grid-2-cols">
                             <div class="form-group" style="grid-column: span 2;">
                                 <label>Horario de funcionamiento</label>
                                 <input type="text" name="horario_funcionamiento" class="form-control"

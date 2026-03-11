@@ -79,6 +79,22 @@ img {
 }
 
 /* Utilities */
+.grid-2-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.grid-2-cols.gap-sm {
+    gap: 12px;
+}
+
+@media (max-width: 768px) {
+    .grid-2-cols {
+        grid-template-columns: 1fr;
+    }
+}
+
 .container {
     width: 100%;
     max-width: 1280px;
