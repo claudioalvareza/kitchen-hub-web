@@ -22,7 +22,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Navigation active state
     const sections = document.querySelectorAll('section');
+    const navLinksContainer = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links a:not(.btn)');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenuIcon = mobileMenuBtn ? mobileMenuBtn.querySelector('i') : null;
+
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinksContainer.classList.toggle('active');
+
+            if (navLinksContainer.classList.contains('active')) {
+                mobileMenuIcon.setAttribute('data-lucide', 'x');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenuIcon.setAttribute('data-lucide', 'menu');
+                document.body.style.overflow = '';
+            }
+            lucide.createIcons();
+        });
+    }
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navLinksContainer.classList.contains('active')) {
+                navLinksContainer.classList.remove('active');
+                if (mobileMenuIcon) {
+                    mobileMenuIcon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                }
+                document.body.style.overflow = '';
+            }
+        });
+    });
 
     window.addEventListener('scroll', () => {
         let current = '';
