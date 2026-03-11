@@ -185,6 +185,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function normalizeMessage(text) {
+        return String(text)
+            .replace(/\r\n/g, "\n")
+            .replace(/\t/g, " ")
+            .replace(/[ ]{2,}/g, " ")
+            .replace(/\n{3,}/g, "\n\n")
+            .trim();
+    }
+
     function appendMessage(text, sender = "bot", isHtml = false) {
         const wrapper = document.createElement("div");
         wrapper.className = `kh-msg kh-msg-${sender}`;
@@ -195,13 +204,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isHtml) {
             bubble.innerHTML = text;
         } else {
-            bubble.textContent = text;
+            bubble.textContent = normalizeMessage(text);
         }
 
         wrapper.appendChild(bubble);
         messages.appendChild(wrapper);
         messages.scrollTop = messages.scrollHeight;
         return wrapper;
+    }
+
+    // Initialize welcome message if empty
+    if (messages && messages.children.length === 0) {
+        const welcomeMessage = `Hola, soy el asistente virtual de Kitchen Hub. 👨‍🍳\n\nPuedo ayudarte a encontrar una dark kitchen para tu marca.\n\n¿En qué comuna o zona te gustaría operar? 📍`;
+        appendMessage(welcomeMessage, "bot");
     }
 
     function addTyping() {
@@ -279,9 +294,11 @@ document.addEventListener('DOMContentLoaded', () => {
             removeTyping();
             let botText = extractBotText(payload);
 
-            // Convert markdown bold and newlines to HTML
+            // Normalize before HTML replacements
+            botText = normalizeMessage(botText);
+
+            // Convert markdown bold to HTML
             botText = botText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-            botText = botText.replace(/\n/g, '<br>');
 
             appendMessage(botText, "bot", true);
         } catch (error) {

@@ -1464,9 +1464,10 @@ footer {
     padding: 13px 14px;
     border-radius: 18px;
     font-size: 14px;
-    line-height: 1.45;
-    white-space: pre-wrap;
+    line-height: 1.5;
+    white-space: pre-line;
     word-break: break-word;
+    text-align: left;
 }
 
 .kh-msg-bot .kh-msg-bubble {
