@@ -133,6 +133,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Handle deep linking for modals on page load
+    const openModalFromHash = () => {
+        const hash = window.location.hash;
+        if (hash) {
+            // Check if the hash matches a modal ID directly
+            const modalId = hash.substring(1); // remove '#'
+            const modal = document.getElementById(modalId);
+
+            if (modal && modal.classList.contains('modal')) {
+                // Scroll to kitchens section first
+                const kitchenSection = document.getElementById('cocinas-para-delivery');
+                if (kitchenSection) {
+                    kitchenSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+
+                // Open the modal
+                modal.style.display = 'block';
+                setTimeout(() => {
+                    modal.classList.add('show');
+                }, 150); // slight delay to allow smooth scroll to start
+                document.body.style.overflow = 'hidden';
+                trackEvent('deep_link_modal_open', { item_id: modalId });
+            }
+        }
+    };
+
+    // Run deep linking check
+    setTimeout(openModalFromHash, 500); // Give the page a moment to setup
+
     // Reveal animations on scroll
     const reveals = document.querySelectorAll('.reveal');
 
