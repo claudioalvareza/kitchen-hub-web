@@ -470,23 +470,26 @@
             </div>
 
             <div class="form-container reveal">
-                <form id="contactForm" class="contact-form"
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/xjgawyjw" method="POST"
                     style="background: var(--bg-surface-elevated); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05);">
                     <div class="form-group">
                         <label for="name">Nombre completo</label>
-                        <input type="text" id="name" class="form-control" placeholder="Ej. Juan Pérez" required>
+                        <input type="text" id="name" name="nombre_completo" class="form-control"
+                            placeholder="Ej. Juan Pérez" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Correo electrónico</label>
-                        <input type="email" id="email" class="form-control" placeholder="juan@tumarca.cl" required>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="juan@tumarca.cl"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Teléfono (WhatsApp)</label>
-                        <input type="tel" id="phone" class="form-control" placeholder="+56 9 XXXX XXXX" required>
+                        <input type="tel" id="phone" name="telefono" class="form-control" placeholder="+56 9 XXXX XXXX"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="bizType">Tipo de negocio gastronómico</label>
-                        <select id="bizType" class="form-control" required>
+                        <select id="bizType" name="tipo_negocio" class="form-control" required>
                             <option value="">Selecciona un rubro</option>
                             <option value="sushi">Sushi / Nikkei</option>
                             <option value="burger">Hamburguesas / Fast Food</option>
@@ -733,7 +736,7 @@
             </div>
 
             <div class="modal-body">
-                <form id="publishForm" class="contact-form">
+                <form id="publishForm" class="contact-form" action="https://formspree.io/f/xjgawyjw" method="POST">
 
                     <!-- Información general -->
                     <div class="modal-section" style="margin-bottom: 32px;">
@@ -744,25 +747,25 @@
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
                             <div class="form-group">
                                 <label>Nombre del operador o empresa</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" name="nombre_vendedor" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Nombre del espacio o hub</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" name="nombre_espacio" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Nombre de contacto</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" name="contacto_vendedor" class="form-control" required>
                             </div>
                             <div class="form-group" style="grid-column: span 2;">
                                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
                                     <div>
                                         <label>Correo electrónico</label>
-                                        <input type="email" class="form-control" required>
+                                        <input type="email" name="email_vendedor" class="form-control" required>
                                     </div>
                                     <div>
                                         <label>Teléfono / WhatsApp</label>
-                                        <input type="tel" class="form-control" required>
+                                        <input type="tel" name="telefono_vendedor" class="form-control" required>
                                     </div>
                                 </div>
                             </div>
@@ -778,19 +781,19 @@
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
                             <div class="form-group" style="grid-column: span 2;">
                                 <label>Dirección exacta</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" name="direccion" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Comuna</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" name="comuna" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Ciudad</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" name="ciudad" class="form-control" required>
                             </div>
                             <div class="form-group" style="grid-column: span 2;">
                                 <label>Referencia de acceso (opcional)</label>
-                                <input type="text" class="form-control">
+                                <input type="text" name="referencia_direccion" class="form-control">
                             </div>
                         </div>
                     </div>
@@ -804,23 +807,25 @@
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
                             <div class="form-group">
                                 <label>Cantidad de módulos disponibles</label>
-                                <input type="number" class="form-control" min="1" required>
+                                <input type="number" name="cantidad_modulos" class="form-control" min="1" required>
                             </div>
                             <div class="form-group">
                                 <label>Superficie de cada módulo (m²)</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" name="superficie_por_modulo" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Valor de arriendo aproximado</label>
-                                <input type="text" class="form-control" placeholder="Ej. $800.000 CLP" required>
+                                <input type="text" name="valor_arriendo" class="form-control"
+                                    placeholder="Ej. $800.000 CLP" required>
                             </div>
                             <div class="form-group">
                                 <label>Gastos comunes / adicionales</label>
-                                <input type="text" class="form-control" placeholder="Ej. $150.000 CLP" required>
+                                <input type="text" name="gastos_adicionales" class="form-control"
+                                    placeholder="Ej. $150.000 CLP" required>
                             </div>
                             <div class="form-group">
                                 <label>Estado de disponibilidad</label>
-                                <select class="form-control" required>
+                                <select name="estado_disponibilidad" class="form-control" required>
                                     <option value="">Selecciona disponibilidad</option>
                                     <option value="inmediata">Inmediata</option>
                                     <option value="futura">Futura (en construcción)</option>
@@ -828,7 +833,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Tipo de energía</label>
-                                <select class="form-control" required>
+                                <select name="tipo_energia" class="form-control" required>
                                     <option value="">Selecciona energía</option>
                                     <option value="monofasica">Monofásica</option>
                                     <option value="trifasica">Trifásica</option>
@@ -837,7 +842,7 @@
                             </div>
                             <div class="form-group" style="grid-column: span 2;">
                                 <label>Tipo de gas disponible</label>
-                                <select class="form-control" required>
+                                <select name="tipo_gas" class="form-control" required>
                                     <option value="">Selecciona gas</option>
                                     <option value="natural">Gas Natural</option>
                                     <option value="licuado">Gas Licuado</option>
@@ -859,42 +864,52 @@
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                             <label
                                 style="display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
-                                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                <input type="checkbox" name="equipamiento_incluido[]" value="Sistema de extracción"
+                                    style="width: 18px; height: 18px; accent-color: var(--primary);">
                                 Sistema de extracción
                             </label>
                             <label
                                 style="display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
-                                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                <input type="checkbox" name="equipamiento_incluido[]"
+                                    value="Campana de acero inoxidable"
+                                    style="width: 18px; height: 18px; accent-color: var(--primary);">
                                 Campana de acero inoxidable
                             </label>
                             <label
                                 style="display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
-                                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                <input type="checkbox" name="equipamiento_incluido[]" value="Trampa de grasa"
+                                    style="width: 18px; height: 18px; accent-color: var(--primary);">
                                 Trampa de grasa
                             </label>
                             <label
                                 style="display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
-                                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                <input type="checkbox" name="equipamiento_incluido[]" value="Lavamanos y/o Lavafondos"
+                                    style="width: 18px; height: 18px; accent-color: var(--primary);">
                                 Lavamanos y/o Lavafondos
                             </label>
                             <label
                                 style="display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
-                                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                <input type="checkbox" name="equipamiento_incluido[]" value="Área de carga y descarga"
+                                    style="width: 18px; height: 18px; accent-color: var(--primary);">
                                 Área de carga y descarga
                             </label>
                             <label
                                 style="display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
-                                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                <input type="checkbox" name="equipamiento_incluido[]" value="Espacio para riders"
+                                    style="width: 18px; height: 18px; accent-color: var(--primary);">
                                 Espacio para riders
                             </label>
                             <label
                                 style="display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
-                                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                <input type="checkbox" name="equipamiento_incluido[]" value="Baños y áreas comunes"
+                                    style="width: 18px; height: 18px; accent-color: var(--primary);">
                                 Baños y áreas comunes
                             </label>
                             <label
                                 style="display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
-                                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                <input type="checkbox" name="equipamiento_incluido[]"
+                                    value="Cámaras de seguridad / Alarma"
+                                    style="width: 18px; height: 18px; accent-color: var(--primary);">
                                 Cámaras de seguridad / Alarma
                             </label>
                         </div>
@@ -909,16 +924,17 @@
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
                             <div class="form-group" style="grid-column: span 2;">
                                 <label>Horario de funcionamiento</label>
-                                <input type="text" class="form-control" placeholder="Ej. Lunes a Domingo 09:00 a 23:00"
-                                    required>
+                                <input type="text" name="horario_funcionamiento" class="form-control"
+                                    placeholder="Ej. Lunes a Domingo 09:00 a 23:00" required>
                             </div>
                             <div class="form-group">
                                 <label>Requisitos para arrendar</label>
-                                <input type="text" class="form-control" placeholder="Ej. Mes de garantía, Dicom, etc.">
+                                <input type="text" name="requisitos_arriendo" class="form-control"
+                                    placeholder="Ej. Mes de garantía, Dicom, etc.">
                             </div>
                             <div class="form-group">
                                 <label>Plazo mínimo de contrato</label>
-                                <select class="form-control">
+                                <select name="plazo_minimo_contrato" class="form-control">
                                     <option value="6">6 meses</option>
                                     <option value="12">12 meses</option>
                                     <option value="24">24 meses o más</option>
@@ -926,7 +942,7 @@
                             </div>
                             <div class="form-group" style="grid-column: span 2;">
                                 <label>Observaciones adicionales (opcional)</label>
-                                <textarea class="form-control" rows="3"
+                                <textarea name="observaciones_adicionales" class="form-control" rows="3"
                                     placeholder="Detalles extra sobre el espacio o proceso"></textarea>
                             </div>
                         </div>
@@ -940,9 +956,11 @@
                         </h3>
                         <div class="form-group">
                             <label>Sube fotos del espacio</label>
-                            <div style="border: 2px dashed rgba(255,255,255,0.2); border-radius: 12px; padding: 24px; text-align: center; color: var(--text-secondary); cursor: pointer; transition: var(--transition);"
+                            <div style="border: 2px dashed rgba(255,255,255,0.2); border-radius: 12px; padding: 24px; text-align: center; color: var(--text-secondary); cursor: pointer; transition: var(--transition); position: relative;"
                                 onmouseover="this.style.borderColor='var(--primary)'; this.style.color='var(--text-primary)';"
                                 onmouseout="this.style.borderColor='rgba(255,255,255,0.2)'; this.style.color='var(--text-secondary)';">
+                                <input type="file" name="fotos_espacio" accept="image/*" multiple
+                                    style="position: absolute; top:0; left:0; width:100%; height:100%; opacity:0; cursor:pointer;" />
                                 <i data-lucide="upload-cloud" style="margin-bottom: 8px;"></i>
                                 <p>Haz clic para subir imágenes</p>
                             </div>

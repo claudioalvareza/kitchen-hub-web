@@ -128,10 +128,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (form) {
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
-                const btn = form.querySelector('button[type="submit"]');
-                const originalText = btn.textContent;
-                btn.textContent = 'Enviando...';
-                btn.disabled = true;
+                const btn = form.querySelector('button[type="submit"]') || document.querySelector(`button[type="submit"][form="${formId}"]`);
+                let originalText = '';
+
+                if (btn) {
+                    originalText = btn.textContent;
+                    btn.textContent = 'Enviando...';
+                    btn.disabled = true;
+                }
 
                 const formData = new FormData(form);
 
@@ -145,34 +149,49 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
 
                     if (response.ok) {
-                        btn.textContent = '¡Mensaje Enviado!';
-                        btn.style.background = 'var(--success-color, #10B981)';
+                        if (btn) {
+                            btn.textContent = '¡Mensaje Enviado!';
+                            btn.style.background = 'var(--success-color, #10B981)';
+                        }
                         form.reset();
 
                         setTimeout(() => {
-                            btn.textContent = originalText;
-                            btn.style.background = '';
-                            btn.disabled = false;
+                            if (btn) {
+                                btn.textContent = originalText;
+                                btn.style.background = '';
+                                btn.disabled = false;
+                            }
 
                             // Close modal if it's inside one
                             const modal = form.closest('.modal');
                             if (modal) {
                                 closeModal(modal);
+                            } else {
+                                // For the publish form where button is outside the form, try finding the modal another way, or just close the open modal
+                                const publishModal = document.getElementById('modal-publish');
+                                if (publishModal && publishModal.classList.contains('show')) closeModal(publishModal);
                             }
                         }, 3000);
                     } else {
+                        const errorData = await response.json();
+                        console.error('Formspree Error payload:', errorData);
+                        if (errorData.errors) {
+                            console.error('Validation errors:', errorData.errors.map(err => err.message).join(', '));
+                        }
                         throw new Error('Formspree returned an error');
                     }
                 } catch (error) {
                     console.error("Error submitting form:", error);
-                    btn.textContent = 'Error al enviar';
-                    btn.style.background = '#e30613';
+                    if (btn) {
+                        btn.textContent = 'Error al enviar';
+                        btn.style.background = '#e30613';
 
-                    setTimeout(() => {
-                        btn.textContent = originalText;
-                        btn.style.background = '';
-                        btn.disabled = false;
-                    }, 3000);
+                        setTimeout(() => {
+                            btn.textContent = originalText;
+                            btn.style.background = '';
+                            btn.disabled = false;
+                        }, 3000);
+                    }
                 }
             });
         }
