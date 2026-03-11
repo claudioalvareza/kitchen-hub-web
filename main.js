@@ -122,40 +122,64 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Simple Form Submission Mock
-    const setupFormMock = (formId) => {
+    // Formspree Integration
+    const setupFormspree = (formId) => {
         const form = document.getElementById(formId);
         if (form) {
-            form.addEventListener('submit', (e) => {
+            form.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const btn = form.querySelector('button[type="submit"]');
                 const originalText = btn.textContent;
                 btn.textContent = 'Enviando...';
                 btn.disabled = true;
 
-                setTimeout(() => {
-                    btn.textContent = '¡Solicitud Enviada!';
-                    btn.style.background = 'var(--success-color, #10B981)';
-                    form.reset();
+                const formData = new FormData(form);
+
+                try {
+                    const response = await fetch("https://formspree.io/f/xjgawyjw", {
+                        method: "POST",
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        btn.textContent = '¡Mensaje Enviado!';
+                        btn.style.background = 'var(--success-color, #10B981)';
+                        form.reset();
+
+                        setTimeout(() => {
+                            btn.textContent = originalText;
+                            btn.style.background = '';
+                            btn.disabled = false;
+
+                            // Close modal if it's inside one
+                            const modal = form.closest('.modal');
+                            if (modal) {
+                                closeModal(modal);
+                            }
+                        }, 3000);
+                    } else {
+                        throw new Error('Formspree returned an error');
+                    }
+                } catch (error) {
+                    console.error("Error submitting form:", error);
+                    btn.textContent = 'Error al enviar';
+                    btn.style.background = '#e30613';
 
                     setTimeout(() => {
                         btn.textContent = originalText;
                         btn.style.background = '';
                         btn.disabled = false;
-
-                        // Close modal if it's inside one
-                        const modal = form.closest('.modal');
-                        if (modal) {
-                            closeModal(modal);
-                        }
                     }, 3000);
-                }, 1500);
+                }
             });
         }
     };
 
-    setupFormMock('contactForm');
-    setupFormMock('publishForm');
+    setupFormspree('contactForm');
+    setupFormspree('publishForm');
 
     // Custom AI Chat Widget Logic
     const N8N_WEBHOOK_URL = "https://claudioalvareza.app.n8n.cloud/webhook/a9a0d5f2-f15e-42ae-a9b2-3287d3f9ec47/chat";
