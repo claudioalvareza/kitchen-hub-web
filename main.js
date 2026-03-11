@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Google Analytics Event Tracking Helper
+    const trackEvent = (eventName, eventParams = {}) => {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, eventParams);
+        }
+    };
+
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -46,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             const modalId = btn.getAttribute('data-modal');
+            trackEvent('view_item', { item_category: 'modal', item_id: modalId });
             const modal = document.getElementById(modalId);
             if (modal) {
                 modal.style.display = 'block';
@@ -149,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
 
                     if (response.ok) {
+                        trackEvent('form_submit_success', { form_id: formId });
                         if (btn) {
                             btn.textContent = '¡Mensaje Enviado!';
                             btn.style.background = 'var(--success-color, #10B981)';
@@ -375,6 +384,7 @@ document.addEventListener('DOMContentLoaded', () => {
     quickActions.forEach((btn) => {
         btn.addEventListener("click", async () => {
             const message = btn.dataset.message;
+            trackEvent('chat_quick_action', { action_text: message });
             await sendMessage(message);
         });
     });
@@ -384,6 +394,7 @@ document.addEventListener('DOMContentLoaded', () => {
     chatTriggerBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
+            trackEvent('chat_open', { source: 'trigger_button' });
             // Close any open modals
             const openModal = btn.closest('.modal');
             if (openModal) {
@@ -399,6 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroSection) {
         window.addEventListener('scroll', () => {
             if (!chatOpenedOnce && window.scrollY > heroSection.offsetHeight) {
+                trackEvent('chat_auto_open', { trigger: 'scroll' });
                 togglePanel(true);
                 chatOpenedOnce = true;
             }
