@@ -223,10 +223,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!payload) return "No pude procesar la respuesta.";
         if (typeof payload === "string") return payload;
 
-        if (payload.output) return payload.output;
+        // Prioritize specific fields based on webhook structure
+        if (payload.clean_response) return payload.clean_response;
         if (payload.response) return payload.response;
-        if (payload.reply) return payload.reply;
+        if (payload.output) return payload.output;
         if (payload.message) return payload.message;
+        if (payload.reply) return payload.reply;
         if (payload.text) return payload.text;
 
         if (Array.isArray(payload) && payload.length > 0) {
@@ -237,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return extractBotText(payload.data);
         }
 
-        return JSON.stringify(payload, null, 2);
+        return "No pude procesar la respuesta (Formato no reconocido).";
     }
 
     async function sendMessage(message) {
@@ -275,7 +277,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             removeTyping();
-            appendMessage(extractBotText(payload), "bot");
+            let botText = extractBotText(payload);
+
+            // Convert markdown bold and newlines to HTML
+            botText = botText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            botText = botText.replace(/\n/g, '<br>');
+
+            appendMessage(botText, "bot", true);
         } catch (error) {
             removeTyping();
             appendMessage(
