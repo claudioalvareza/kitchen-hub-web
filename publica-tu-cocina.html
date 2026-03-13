@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Non-Indexed Page for Pitch Deck -->
+    <meta name="robots" content="noindex, nofollow">
+    <title>Publica tu Cocina | Kitchen Hub</title>
+    
+    <!-- Primary CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Pitch Deck Specific CSS -->
+    <link rel="stylesheet" href="pitch-deck.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Minimal Header -->
+    <header class="pitch-header">
+        <div class="pitch-header-container">
+            <a href="index.html" class="logo">
+                <img src="./assets/logo_kitchen_lab.png" alt="Kitchen Hub Logo" class="logo-img">
+            </a>
+            <a href="#contacto" class="btn btn-primary btn-sm">Agendar reunión</a>
+        </div>
+    </header>
+
+    <!-- Side Navigation / Progress Indicator -->
+    <nav class="pitch-nav" aria-label="Navegación de presentación">
+        <ul>
+            <li><a href="#slide-1" class="active" aria-label="Slide 1: Portada"></a></li>
+            <li><a href="#slide-2" aria-label="Slide 2: El Problema"></a></li>
+            <li><a href="#slide-3" aria-label="Slide 3: Solución"></a></li>
+            <li><a href="#slide-4" aria-label="Slide 4: Cómo Funciona"></a></li>
+            <li><a href="#slide-5" aria-label="Slide 5: Modelo Comercial"></a></li>
+            <li><a href="#slide-6" aria-label="Slide 6: Agente IA"></a></li>
+            <li><a href="#slide-7" aria-label="Slide 7: Beneficios"></a></li>
+            <li><a href="#slide-8" aria-label="Slide 8: Cierre"></a></li>
+        </ul>
+    </nav>
+
+    <!-- Presentation Container -->
+    <main class="pitch-container">
+
+        <!-- SLIDE 1: PORTADA -->
+        <section id="slide-1" class="pitch-slide slide-hero">
+            <div class="video-overlay"></div>
+            <video class="bg-video" autoplay loop muted playsinline>
+                <source src="./assets/Create_an_ultrarealistic_cinematic_background_vide_34c1fa3e23.mp4" type="video/mp4">
+            </video>
+            
+            <div class="slide-content reveal scroll-reveal">
+                <h1>Publica tu cocina donde la <span class="gradient-text">demanda te puede encontrar</span></h1>
+                <h2>Kitchen Hub conecta cocinas profesionales disponibles con marcas gastronómicas listas para expandirse.</h2>
+                <p>Una plataforma especializada para visibilizar tu espacio, atraer interesados calificados y acompañar el cierre comercial.</p>
+                <div class="hero-actions" style="margin-top: 2rem;">
+                    <a href="#contacto" class="btn btn-primary">Publicar mi cocina</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll para explorar</span>
+                <i data-lucide="chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: EL PROBLEMA -->
+        <section id="slide-2" class="pitch-slide slide-problem">
+            <div class="split-layout">
+                <div class="split-image scroll-reveal" style="background-image: url('./assets/grey-cooking-pot.jpg');">
+                    <div class="image-overlay-problem"></div>
+                </div>
+                <div class="split-content">
+                    <div class="scroll-reveal">
+                        <h2 class="slide-label">El Problema</h2>
+                        <h3 class="slide-title">Tener una cocina disponible no garantiza ocuparla rápido</h3>
+                        <p class="slide-description">La vacancia, la baja visibilidad y la gestión comercial dispersa frenan el rendimiento del activo.</p>
+                        
+                        <div class="problem-list">
+                            <div class="problem-item scroll-reveal delay-1">
+                                <div class="problem-icon"><i data-lucide="alert-circle"></i></div>
+                                <div>
+                                    <h4>Baja Visibilidad</h4>
+                                    <p>Dependencia de redes personales y publicaciones aisladas sin alcance al público objetivo real.</p>
+                                </div>
+                            </div>
+                            <div class="problem-item scroll-reveal delay-2">
+                                <div class="problem-icon"><i data-lucide="users-x"></i></div>
+                                <div>
+                                    <h4>Leads no calificados</h4>
+                                    <p>Interesados que no cumplen con los requisitos operativos o financieros, haciendo perder tiempo al dueño.</p>
+                                </div>
+                            </div>
+                            <div class="problem-item scroll-reveal delay-3">
+                                <div class="problem-icon"><i data-lucide="file-question"></i></div>
+                                <div>
+                                    <h4>Gestión Fragmentada</h4>
+                                    <p>Mensajes sueltos en WhatsApp, correos perdidos y falta de un proceso estandarizado para visitas y contratos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: QUÉ ES KITCHEN HUB -->
+        <section id="slide-3" class="pitch-slide slide-solution">
+            <div class="slide-content container scroll-reveal">
+                <h2 class="slide-label text-center">La Solución</h2>
+                <h3 class="slide-title text-center">Un marketplace especializado en dark kitchens y cocinas para delivery</h3>
+                <p class="slide-description text-center blur-text">Kitchen Hub ordena la oferta, mejora la presentación comercial y conecta tu cocina con marcas que buscan operar.</p>
+                
+                <div class="dashboard-mockup scroll-reveal delay-1">
+                    <div class="dashboard-header">
+                        <div class="dots"><span></span><span></span><span></span></div>
+                        <div class="url-bar">kitchenhub.cl/dark-kitchen-providencia</div>
+                    </div>
+                    <div class="dashboard-body">
+                        <div class="mockup-sidebar">
+                            <div class="mockup-line"></div>
+                            <div class="mockup-line short"></div>
+                            <div class="mockup-line"></div>
+                            <div class="mockup-line medium"></div>
+                        </div>
+                        <div class="mockup-main">
+                            <div class="mockup-hero" style="background-image: url('./assets/chief-cook-holds-pork-meat-fry-pan-kitchen.jpg');"></div>
+                            <div class="mockup-content">
+                                <h4 style="text-align: left;">Hub Central Providencia - Módulo 04</h4>
+                                <div class="mockup-badges">
+                                    <span class="badge">15 m²</span>
+                                    <span class="badge">Equipada</span>
+                                </div>
+                                <p style="text-align: left;">Cocina profesional lista para operar en sector de alta demanda de delivery. Resolución sanitaria al día, extracción campana 90cm, lavaderos acero inox.</p>
+                                <div style="text-align: left;">
+                                    <div class="mockup-action">Contactar aseror IA</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: CÓMO FUNCIONA -->
+        <section id="slide-4" class="pitch-slide slide-process">
+            <div class="slide-content container scroll-reveal">
+                <h2 class="slide-label text-center">El Proceso</h2>
+                <h3 class="slide-title text-center">Un proceso simple para activar tu cocina en la plataforma</h3>
+                <p class="slide-description text-center">Desde el levantamiento de información hasta la captación de leads, estructuramos todo el proceso comercial.</p>
+
+                <div class="process-timeline">
+                    <div class="timeline-step scroll-reveal delay-1">
+                        <div class="step-number">01</div>
+                        <h4>Levantamiento</h4>
+                        <p>Recopilamos información clave, métricas técnicas y fotos de tu cocina.</p>
+                    </div>
+                    <div class="timeline-step scroll-reveal delay-2">
+                        <div class="step-number">02</div>
+                        <h4>Validación</h4>
+                        <p>Validamos atributos comerciales, normativos y el estándar operativo del espacio.</p>
+                    </div>
+                    <div class="timeline-step scroll-reveal delay-3">
+                        <div class="step-number">03</div>
+                        <h4>Publicación</h4>
+                        <p>Creamos el perfil premium en el marketplace y lo conectamos a la red de demanda.</p>
+                    </div>
+                    <div class="timeline-step scroll-reveal delay-4">
+                        <div class="step-number">04</div>
+                        <h4>Agente IA</h4>
+                        <p>El espacio se integra al "cerebro" de la IA para responder y precalificar leads 24/7.</p>
+                    </div>
+                    <div class="timeline-step scroll-reveal delay-5">
+                        <div class="step-number">05</div>
+                        <h4>Filtrado</h4>
+                        <p>Enrutamos a los interesados que hacen match real con la capacidad operativa de tu cocina.</p>
+                    </div>
+                    <div class="timeline-step scroll-reveal delay-6">
+                        <div class="step-number">06</div>
+                        <h4>Cierre</h4>
+                        <p>Acompañamos las visitas y la negociación comercial hasta la firma del contrato.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: MODELO COMERCIAL -->
+        <section id="slide-5" class="pitch-slide slide-business">
+            <div class="slide-content container scroll-reveal">
+                <h2 class="slide-label text-center">Modelo Comercial</h2>
+                <h3 class="slide-title text-center">Sin costo fijo: solo cobramos cuando se concreta el negocio</h3>
+                
+                <div class="business-model scroll-reveal delay-1">
+                    <div class="business-card">
+                        <div class="business-icon"><i data-lucide="percent"></i></div>
+                        <div class="business-formula">
+                            <span class="highlight">0 Costo Fijo</span>
+                            <span class="divider">+</span>
+                            <span class="highlight">Pago contra resultado</span>
+                        </div>
+                        <p>El modelo de Kitchen Hub funciona mediante una comisión de corretaje pagadera al cierre.</p>
+                        <div class="commission-box">
+                            <strong>1 Mes de Arriendo + IVA</strong>
+                            <span>Asociado a la firma del contrato</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 6: AGENTE DE IA -->
+        <section id="slide-6" class="pitch-slide slide-ai">
+            <div class="split-layout reverse">
+                <div class="split-content">
+                    <div class="scroll-reveal">
+                        <h2 class="slide-label">Tecnología</h2>
+                        <h3 class="slide-title">Un agente de IA que amplía tu capacidad comercial</h3>
+                        <p class="slide-description">La plataforma incorpora un asistente inteligente que responde consultas, orienta búsquedas y mejora la atención a potenciales interesados 24/7.</p>
+                        
+                        <ul class="benefit-list">
+                            <li class="scroll-reveal delay-1"><i data-lucide="check-circle-2"></i> Precalifica leads filtrando por rubro y capacidad operativa.</li>
+                            <li class="scroll-reveal delay-2"><i data-lucide="check-circle-2"></i> Responde dudas técnicas sobre extracción, energía y resolución sanitaria.</li>
+                            <li class="scroll-reveal delay-3"><i data-lucide="check-circle-2"></i> Agenda visitas solo con interesados con intención real.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="split-image chat-container scroll-reveal delay-2">
+                    <div class="chat-mockup">
+                        <div class="chat-message user">
+                            <p>¿Tienen alguna cocina disponible en la zona oriente que cuente con resolución sanitaria para producción de pastelería?</p>
+                        </div>
+                        <div class="chat-message ai">
+                            <div class="ai-avatar"><img src="./assets/logo_kitchen_lab.png" alt="AI"></div>
+                            <div class="ai-bubble">
+                                <p>Sí, contamos con el <strong>Hub Central Vitacura</strong> que tiene un módulo de 18m² disponible, con resolución sanitaria aprobada y extracción especializada ideal para pastelería. ¿Te gustaría agendar una visita presencial?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 7: BENEFICIOS -->
+        <section id="slide-7" class="pitch-slide slide-benefits">
+            <div class="slide-content container scroll-reveal">
+                <h2 class="slide-label text-center">Beneficios</h2>
+                <h3 class="slide-title text-center">Más visibilidad, mejor filtrado y acompañamiento</h3>
+                <p class="slide-description text-center blur-text">Kitchen Hub no solo publica tu cocina: la transforma en una oportunidad comercial clara y competitiva.</p>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card scroll-reveal delay-1">
+                        <i data-lucide="trending-up"></i>
+                        <h4>Exposición Calificada</h4>
+                        <p>Acceso a marcas gastronómicas activas buscando expandirse, reduciendo el tiempo de vacancia.</p>
+                    </div>
+                    <div class="benefit-card scroll-reveal delay-2">
+                        <i data-lucide="layout-template"></i>
+                        <h4>Presentación Profesional</h4>
+                        <p>Tu activo se muestra con un estándar alto, destacando atributos clave que los operadores valoran.</p>
+                    </div>
+                    <div class="benefit-card scroll-reveal delay-3">
+                        <i data-lucide="bot"></i>
+                        <h4>Atención IA 24/7</h4>
+                        <p>Respuestas inmediatas a consultas técnicas y comerciales sin que inviertas tu tiempo.</p>
+                    </div>
+                    <div class="benefit-card scroll-reveal delay-4">
+                        <i data-lucide="filter"></i>
+                        <h4>Proceso Ordenado</h4>
+                        <p>Filtramos el "ruido" comercial para que solo recibas propuestas serias y compatibles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 8: CIERRE -->
+        <section id="slide-8" class="pitch-slide slide-closing">
+            <div class="video-overlay"></div>
+            <div class="slide-content container scroll-reveal" style="z-index: 2; position: relative;">
+                <img src="./assets/logo_kitchen_lab.png" alt="Kitchen Hub" style="height: 60px; margin-bottom: 40px; opacity: 0.8;">
+                <h2 class="slide-title text-center" style="font-size: 4rem; max-width: 900px; color: white;">Activa tu cocina con una plataforma pensada para cerrar negocios</h2>
+                <p class="slide-description text-center blur-text" style="color: rgba(255,255,255,0.7);">Publica tu espacio en Kitchen Hub y conecta hoy con marcas que ya están buscando dónde operar.</p>
+                
+                <div class="cta-buttons" style="display: flex; gap: 24px; justify-content: center; margin-top: 40px;">
+                    <a href="#contacto" class="btn btn-primary" style="padding: 16px 40px; font-size: 1.1rem; border-radius: 8px;">Publicar mi cocina</a>
+                    <a href="#contacto" class="btn btn-outline" style="padding: 16px 40px; font-size: 1.1rem; border: 1px solid rgba(255,255,255,0.3); color: white; border-radius: 8px; font-weight: 500;">Agendar reunión</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+
+        // Intersection Observer for Scroll Snapping dots and Reveal animations
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".pitch-slide");
+            const navLinks = document.querySelectorAll(".pitch-nav a");
+
+            const observerOptions = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.5 // Trigger when 50% of slide is visible
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Update Dots
+                        let activeId = entry.target.getAttribute("id");
+                        navLinks.forEach(link => {
+                            link.classList.remove("active");
+                            if (link.getAttribute("href") === `#${activeId}`) {
+                                link.classList.add("active");
+                            }
+                        });
+
+                        // Trigger animations on slide content
+                        const animatedElements = entry.target.querySelectorAll('.scroll-reveal');
+                        animatedElements.forEach((el, index) => {
+                            setTimeout(() => {
+                                el.classList.add('active');
+                            }, index * 150); // staggered entrance
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
