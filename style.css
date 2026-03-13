@@ -252,6 +252,7 @@ img {
 .dropdown {
     position: relative;
     display: inline-block;
+    padding: 10px 0;
 }
 
 .dropdown-content {
