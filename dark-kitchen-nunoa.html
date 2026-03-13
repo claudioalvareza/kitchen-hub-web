@@ -14,35 +14,151 @@
 
         gtag('config', 'G-G3XEYHBP1B');
     </script>
-    <title>Dark Kitchen en Chile | Cocinas para Delivery | Kitchen Hub</title>
+    <title>Dark Kitchen en Ñuñoa | Cocinas para Delivery | Kitchen Hub</title>
     <meta name="description"
-        content="Kitchen Hub conecta marcas gastronómicas con dark kitchens y cocinas para delivery disponibles en Santiago. Encuentra espacios profesionales listos para operar o publica tu cocina en la red.">
+        content="Encuentra dark kitchens en Ñuñoa listas para operar. Kitchen Hub conecta marcas gastronómicas con cocinas profesionales para delivery en Santiago.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/FAVICON.png">
 
-    <!-- JSON-LD Structured Data -->
+    <!-- JSON-LD Structured Data: Organization & LocalBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Kitchen Hub",
-      "url": "https://kitchenhub.cl",
-      "logo": "https://kitchenhub.cl/assets/logo_kitchen_lab.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "hola@kitchenhub.cl",
-        "contactType": "customer service"
-      },
-      "additionalType": "marketplace de cocinas profesionales"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Dark Kitchens en Ñuñoa | Kitchen Hub",
+          "url": "https://kitchenhub.cl/dark-kitchen-nunoa",
+          "logo": "https://kitchenhub.cl/assets/logo_kitchen_lab.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "hola@kitchenhub.cl",
+            "contactType": "customer service"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "Kitchen Hub Ñuñoa",
+          "description": "Dark kitchens y cocinas profesionales para delivery en Ñuñoa.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ñuñoa",
+            "addressRegion": "Región Metropolitana",
+            "addressCountry": "CL"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "¿Necesito permisos sanitarios para operar una dark kitchen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Las instalaciones en Kitchen Hub están diseñadas cumpliendo toda la normativa sanitaria vigente para que el proceso de obtener tu resolución sea rápido y sin contratiempos."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta arrendar una dark kitchen en Vitacura?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El valor depende de los metros cuadrados del módulo y los servicios asociados. Te recomendamos agendar una visita o hablar con un asesor para recibir información detallada."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Puedo operar más de una marca en la misma cocina?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutamente. Una de las mayores ventajas del modelo dark kitchen es que te permite centralizar la producción de múltiples marcas virtuales en un mismo punto."
+        }
+      }]
+    }
+    </script>
+    
+    <!-- JSON-LD Structured Data: Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://kitchenhub.cl"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Cocinas",
+        "item": "https://kitchenhub.cl/#cocinas-para-delivery"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Ñuñoa"
+      }]
     }
     </script>
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css?v=1.1">
+    <style>
+        .faq-grid {
+            display: grid;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 24px;
+            transition: var(--transition);
+        }
+        .faq-item:hover {
+            border-color: rgba(227, 6, 19, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .faq-question i {
+            color: var(--primary);
+        }
+        .faq-answer {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .seo-text-section {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+        .seo-text-section h3 {
+            color: var(--text-primary);
+            margin-top: 32px;
+            margin-bottom: 16px;
+        }
+    </style>
 </head>
 
 <body>
@@ -50,7 +166,7 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="./assets/logo_kitchen_lab.png" alt="Kitchen Hub Logo - Marketplace de Cocinas para Delivery"
                     class="logo-img">
             </a>
@@ -60,143 +176,88 @@
             </button>
 
             <div class="nav-links">
-                <a href="#como-funciona">Cómo Funciona</a>
-                <div class="dropdown">
-                    <a href="#cocinas-para-delivery" style="display: flex; align-items: center; gap: 4px;">Explorar Cocinas <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i></a>
-                    <div class="dropdown-content">
-                        <a href="#cocinas-para-delivery">Ver todas</a>
-                        <a href="dark-kitchen-vitacura.html">Dark Kitchens en Vitacura</a>
-                        <a href="dark-kitchen-nunoa.html">Dark Kitchens en Ñuñoa</a>
-                    </div>
-                </div>
-                <a href="#ventajas">Ventajas</a>
+                <a href="index.html#como-funciona">Cómo Funciona</a>
+                <a href="index.html#cocinas-para-delivery">Explorar Cocinas</a>
+                <a href="index.html#ventajas">Ventajas</a>
                 <a href="#" class="btn btn-secondary chat-trigger-btn">Hablar con un asesor</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content reveal">
-                <h1>Encuentra la <span class="gradient-text">dark kitchen ideal</span> para tu marca</h1>
-                <p>Kitchen Hub conecta marcas gastronómicas con cocinas profesionales listas para operar en zonas
-                    estratégicas de delivery.</p>
-                <div class="hero-actions">
-                    <a href="#cocinas-para-delivery" class="btn btn-primary">Explorar cocinas disponibles</a>
-                    <a href="#" class="btn btn-secondary chat-trigger-btn">Hablar con un asesor</a>
+    <!-- Internal Hero Section -->
+    <section class="internal-hero">
+        <div class="container internal-hero-content reveal">
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a>
+                <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i>
+                <a href="index.html#cocinas-para-delivery">Cocinas</a>
+                <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i>
+                <span>Ñuñoa</span>
+            </div>
+            <h1>Dark Kitchens en Ñuñoa para marcas de delivery</h1>
+            <p>Encuentra cocinas profesionales listas para operar en Ñuñoa.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Layout -->
+    <section class="container post-layout">
+        <div class="post-content">
+            <!-- Intro and Context Section -->
+            <div style="margin-bottom: 60px;">
+                <h2 style="font-size: 2rem; margin-bottom: 24px;">El auge del Delivery en Ñuñoa</h2>
+                <div class="seo-text-section">
+                    <p>Ñuñoa se ha consolidado como uno de los polos gastronómicos emergentes de Santiago. Su alta densidad residencial, la presencia de estudiantes y profesionales jóvenes, y el crecimiento de las plataformas de delivery han impulsado la demanda por dark kitchens en Ñuñoa.</p>
+                    <p>Para muchas marcas gastronómicas, operar desde una cocina equipada para delivery en Ñuñoa permite acceder a un mercado amplio dentro de Santiago oriente y centro, optimizando costos y tiempos de despacho.</p>
+                    <p>Kitchen Hub conecta emprendedores gastronómicos, restaurantes y marcas de delivery con cocinas profesionales listas para operar, facilitando el lanzamiento o expansión de marcas gastronómicas.</p>
                 </div>
             </div>
-            <div class="hero-visual reveal">
-                <div class="hero-image-wrapper">
-                    <img src="./assets/hero.jpg" alt="dark kitchen profesional en Santiago" class="hero-main-img">
-                    <div class="hero-image-overlay"></div>
-                </div>
-                <!-- Abstract tech representations -->
-                <div class="tech-card tc-1">
-                    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px;">Ubicación:
-                        Providencia</div>
-                    <div style="font-weight: 600; font-size: 1.1rem;">Hub Central 04</div>
-                    <div class="tc-metrics">
-                        <div class="tc-metric active"></div>
-                        <div class="tc-metric"></div>
+
+            <!-- Ñuñoa as strategic zone -->
+            <div style="margin-bottom: 60px;">
+                <h2 style="font-size: 2rem; margin-bottom: 16px;">Ñuñoa como zona estratégica para delivery</h2>
+                <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 24px;">Ñuñoa destaca por varias características que la hacen atractiva para operar una marca de delivery.</p>
+                
+                <div class="features-grid" style="margin-top: 40px;">
+                    <div class="feature-item reveal">
+                        <div class="feature-icon"><i data-lucide="users"></i></div>
+                        <div>
+                            <h4>Alta densidad residencial</h4>
+                            <p>La comuna cuenta con una gran concentración de departamentos y barrios residenciales.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item reveal" style="transition-delay: 100ms;">
+                        <div class="feature-icon"><i data-lucide="smartphone"></i></div>
+                        <div>
+                            <h4>Público joven y activo</h4>
+                            <p>Muchos residentes utilizan regularmente plataformas como Uber Eats, Rappi o PedidosYa.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item reveal" style="transition-delay: 200ms;">
+                        <div class="feature-icon"><i data-lucide="map"></i></div>
+                        <div>
+                            <h4>Ubicación estratégica</h4>
+                            <p>Desde Ñuñoa es posible cubrir comunas cercanas como Providencia, Santiago Centro, Macul y La Reina.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item reveal" style="transition-delay: 300ms;">
+                        <div class="feature-icon"><i data-lucide="utensils"></i></div>
+                        <div>
+                            <h4>Escenario dinámico</h4>
+                            <p>La comuna ha visto un crecimiento sostenido de restaurantes y marcas gastronómicas en los últimos años.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="tech-card tc-2">
-                    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px;">Demanda de
-                        Delivery</div>
-                    <div style="font-weight: 600; font-size: 1.1rem; color: #10B981;">+45% en la zona</div>
-                    <div class="tc-metrics">
-                        <div class="tc-metric active" style="width: 80%; background: #10B981;"></div>
-                    </div>
-                </div>
-                <div class="tech-card tc-3"></div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Brands Logo Marquee -->
-    <section class="brands-section reveal">
-        <div class="container">
-            <h3 class="section-subtitle"
-                style="margin-bottom: 32px; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; text-align: center; color: var(--text-secondary);">
-                Marcas que ya operan en la red
-            </h3>
-            <div class="brands-container">
-                <div class="brands-track">
-                    <!-- Original List -->
-                    <img src="./assets/marcas/chicken-love-you.png" alt="Chicken Love You" class="brand-logo">
-                    <img src="./assets/marcas/paletas.png" alt="Paletas" class="brand-logo">
-                    <img src="./assets/marcas/take-a-wok.png" alt="Take a Wok" class="brand-logo">
-                    <img src="./assets/marcas/umami.png" alt="Umami Nikkei" class="brand-logo">
-                    <img src="./assets/marcas/china-wok.png" alt="China Wook" class="brand-logo">
-                    <img src="./assets/marcas/noah-sushi.png" alt="Noah Sushi" class="brand-logo">
-                    <img src="./assets/marcas/tommy-beans.png" alt="Tommy Beans" class="brand-logo">
-                    <img src="./assets/marcas/underpizza.png" alt="Under Pizza" class="brand-logo">
-                    <img src="./assets/marcas/la-burguesia.png" alt="La Burguesía" class="brand-logo">
-
-                    <!-- Duplicate List for seamless scrolling -->
-                    <img src="./assets/marcas/chicken-love-you.png" alt="Chicken Love You" class="brand-logo">
-                    <img src="./assets/marcas/paletas.png" alt="Paletas" class="brand-logo">
-                    <img src="./assets/marcas/take-a-wok.png" alt="Take a Wok" class="brand-logo">
-                    <img src="./assets/marcas/umami.png" alt="Umami Nikkei" class="brand-logo">
-                    <img src="./assets/marcas/china-wok.png" alt="China Wook" class="brand-logo">
-                    <img src="./assets/marcas/noah-sushi.png" alt="Noah Sushi" class="brand-logo">
-                    <img src="./assets/marcas/tommy-beans.png" alt="Tommy Beans" class="brand-logo">
-                    <img src="./assets/marcas/underpizza.png" alt="Under Pizza" class="brand-logo">
-                    <img src="./assets/marcas/la-burguesia.png" alt="La Burguesía" class="brand-logo">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How it works -->
-    <section id="como-funciona" class="section">
-        <div class="container">
-            <h2 class="section-title reveal">Cómo funciona</h2>
-            <p class="section-subtitle reveal">Tres pasos simples para comenzar a operar en una dark kitchen.</p>
-
-            <div class="steps-grid">
-                <div class="step-card reveal">
-                    <div class="step-icon"><i data-lucide="map-pin"></i></div>
-                    <h3>Cuéntanos sobre tu marca</h3>
-                    <p>Comparte información básica sobre tu negocio gastronómico, tipo de cocina y necesidades de
-                        producción.</p>
-                </div>
-                <div class="step-card reveal" style="transition-delay: 100ms;">
-                    <div class="step-icon"><i data-lucide="chef-hat"></i></div>
-                    <h3>Te recomendamos las mejores opciones</h3>
-                    <p>Nuestro equipo y asistente inteligente te mostrarán las cocinas disponibles que mejor se adapten
-                        a tu operación.</p>
-                </div>
-                <div class="step-card reveal" style="transition-delay: 200ms;">
-                    <div class="step-icon"><i data-lucide="calendar-check"></i></div>
-                    <h3>Agenda visita y comienza a producir</h3>
-                    <p>Coordina una visita, firma el contrato y comienza a operar en una cocina profesional.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Available Kitchens -->
-    <section id="cocinas-para-delivery" class="section kitchens-section">
-        <div class="container">
-            <h2 class="section-title reveal">Cocinas para delivery disponibles</h2>
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 16px;">
-                <p class="section-subtitle reveal" style="margin-bottom: 0; max-width: 600px;">Espacios de alto rendimiento listos para tu marca.</p>
-                <div style="display: flex; gap: 16px;">
-                    <a href="dark-kitchen-vitacura.html" class="btn btn-secondary reveal" style="display: inline-flex; align-items: center; gap: 8px;">
-                        Ver cocinas en Vitacura <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
-                    </a>
-                    <a href="dark-kitchen-nunoa.html" class="btn btn-secondary reveal" style="display: inline-flex; align-items: center; gap: 8px;">
-                        Ver cocinas en Ñuñoa <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
-                    </a>
-                </div>
             </div>
 
-            <div class="kitchen-grid">
+            <!-- Available Kitchens in Ñuñoa -->
+            <div id="cocinas-disponibles" style="margin-bottom: 60px;">
+                <h2 style="font-size: 2rem; margin-bottom: 16px;">Dark kitchens disponibles en Ñuñoa</h2>
+                <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 40px;">Nuestros módulos en arriendo, diseñados para operaciones ininterrumpidas.</p>
+
+                <!-- Map Container -->
+                <div id="nunoa-map" style="height: 400px; width: 100%; border-radius: var(--radius-lg); margin-bottom: 40px; border: 1px solid var(--border-color); z-index: 1;"></div>
+
+                <div class="kitchen-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
                 <!-- Card Ñuñoa 1 -->
                 <div class="kitchen-card reveal" style="transition-delay: 200ms;">
                     <img src="./assets/modulos/cocina_central_1.jpg" alt="Cocina Central Ñuñoa - Cocina 1"
@@ -288,272 +349,141 @@
                         <button class="btn btn-details" data-modal="modal-nunoa-4">Ver detalles</button>
                     </div>
                 </div>
+                </div>
+            </div>
 
-                <!-- Card 1: Vitacura -->
-                <div class="kitchen-card reveal">
-                    <img src="./assets/modulo_1_vitacura.jpg" alt="cocina para delivery equipada en Vitacura"
-                        class="sr-only" style="display:none;">
-                    <div class="kitchen-img"
-                        style="background-image: url('./assets/modulo_1_vitacura.jpg'); background-size: cover; background-position: center;">
-                        <div class="badge-location"><i data-lucide="map-pin" style="width: 14px; height: 14px;"></i>
-                            Vitacura</div>
-                    </div>
-                    <div class="kitchen-info">
-                        <h3>Kitchen Hub Vitacura</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9375rem; margin-bottom: 16px;">Módulos
-                            disponibles para operación gastronómica inmediata.</p>
-                        <div class="kitchen-specs">
-                            <div class="spec-item"><i data-lucide="maximize" style="width: 16px; height: 16px;"></i> 11
-                                m²</div>
-                            <div class="spec-item"><i data-lucide="maximize" style="width: 16px; height: 16px;"></i>
-                                12,35 m²</div>
-                            <div class="spec-item"
-                                style="color: #10B981; border-color: rgba(16, 185, 129, 0.2); background: rgba(16, 185, 129, 0.1);">
-                                <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10B981;"></i>
-                                Disponible
-                            </div>
+            <!-- Advantages in Ñuñoa -->
+            <div style="margin-bottom: 60px;">
+                <div class="growth-header" style="text-align: left; margin-bottom: 40px;">
+                    <h2 style="font-size: 2rem; margin-bottom: 16px;">Ventajas de operar una dark kitchen en Ñuñoa</h2>
+                    <p style="font-size: 1.125rem; color: var(--text-secondary); margin: 0;">Operar una dark kitchen en Ñuñoa ofrece varias ventajas para marcas gastronómicas enfocadas en delivery.</p>
+                </div>
+
+                <div class="growth-grid" style="grid-template-columns: 1fr;">
+                    <div class="growth-card">
+                        <div class="growth-icon"><i data-lucide="users"></i></div>
+                        <div class="growth-content">
+                            <h4>Amplia base de clientes</h4>
+                            <p>La comuna combina alta densidad poblacional con una fuerte adopción del delivery.</p>
                         </div>
-                        <ul
-                            style="margin-bottom: 24px; color: var(--text-secondary); font-size: 0.875rem; display: flex; flex-direction: column; gap: 8px;">
-                            <li>• Extracción independiente</li>
-                            <li>• Energía monofásica y trifásica</li>
-                        </ul>
-                        <button class="btn btn-details" data-modal="modal-vitacura">Ver detalles</button>
                     </div>
-                </div>
-                <!-- Card 2: Las Condes -->
-                <div class="kitchen-card reveal" style="transition-delay: 100ms;">
-                    <img src="./assets/modulo_las_condes.jpg"
-                        alt="infraestructura de dark kitchen moderna en Las Condes" class="sr-only"
-                        style="display:none;">
-                    <div class="kitchen-img"
-                        style="background-image: url('./assets/modulo_las_condes.jpg'); background-size: cover; background-position: center;">
-                        <div class="badge-location"><i data-lucide="map-pin" style="width: 14px; height: 14px;"></i> Las
-                            Condes</div>
-                    </div>
-                    <div class="kitchen-info">
-                        <h3>Kitchen Hub Las Condes</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9375rem; margin-bottom: 16px;">Espacio
-                            diseñado para marcas gastronómicas en crecimiento.</p>
-                        <div class="kitchen-specs">
-                            <div class="spec-item"><i data-lucide="maximize" style="width: 16px; height: 16px;"></i>
-                                16,25 m²</div>
-                            <div class="spec-item"
-                                style="color: #10B981; border-color: rgba(16, 185, 129, 0.2); background: rgba(16, 185, 129, 0.1);">
-                                <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10B981;"></i>
-                                Disponible
-                            </div>
+                    <div class="growth-card">
+                        <div class="growth-icon"><i data-lucide="rocket"></i></div>
+                        <div class="growth-content">
+                            <h4>Cobertura logística</h4>
+                            <p>Permite despachos rápidos hacia múltiples zonas de Santiago.</p>
                         </div>
-                        <ul
-                            style="margin-bottom: 24px; color: var(--text-secondary); font-size: 0.875rem; display: flex; flex-direction: column; gap: 8px;">
-                            <li>• Campana de acero inoxidable</li>
-                            <li>• Trampa de grasa instalada</li>
-                        </ul>
-                        <button class="btn btn-details" data-modal="modal-las-condes">Ver detalles</button>
+                    </div>
+                    <div class="growth-card">
+                        <div class="growth-icon"><i data-lucide="wallet"></i></div>
+                        <div class="growth-content">
+                            <h4>Menor inversión</h4>
+                            <p>Las dark kitchens permiten operar sin los costos asociados a un restaurante tradicional.</p>
+                        </div>
+                    </div>
+                    <div class="growth-card">
+                        <div class="growth-icon"><i data-lucide="bar-chart"></i></div>
+                        <div class="growth-content">
+                            <h4>Escalabilidad</h4>
+                            <p>Es posible operar múltiples marcas desde una misma cocina en este importante polo residencial.</p>
+                        </div>
                     </div>
                 </div>
-
             </div>
-        </div>
+
+            <!-- How Kitchen Hub works -->
+            <div style="margin-bottom: 60px; padding: 40px; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                <h2 style="font-size: 2rem; margin-bottom: 16px;">Cómo funciona Kitchen Hub</h2>
+                <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 32px;">Tu nueva cocina en 3 simples pasos.</p>
+
+                <div class="steps-grid" style="margin-top: 0; grid-template-columns: 1fr; gap: 24px;">
+                    <div class="step-card" style="display: flex; text-align: left; gap: 24px; padding: 24px;">
+                        <div class="step-icon" style="margin: 0; flex-shrink: 0;"><i data-lucide="search"></i></div>
+                        <div>
+                            <h3>Explorar cocinas</h3>
+                            <p>Revisa las dark kitchens publicadas en la plataforma y encuentra el módulo que mejor se adapte a tus metros y necesidades.</p>
+                        </div>
+                    </div>
+                    <div class="step-card" style="display: flex; text-align: left; gap: 24px; padding: 24px;">
+                        <div class="step-icon" style="margin: 0; flex-shrink: 0;"><i data-lucide="calendar"></i></div>
+                        <div>
+                            <h3>Agendar visita</h3>
+                            <p>Contacta a nuestro equipo para visitar presencialmente el hub, revisar los empalmes, equipamiento y áreas comunes.</p>
+                        </div>
+                    </div>
+                    <div class="step-card" style="display: flex; text-align: left; gap: 24px; padding: 24px;">
+                        <div class="step-icon" style="margin: 0; flex-shrink: 0;"><i data-lucide="play"></i></div>
+                        <div>
+                            <h3>Comenzar a operar</h3>
+                            <p>Firma tu contrato e ingresa a operar. Nosotros nos encargamos del mantenimiento técnico para que tú solo te preocupes de cocinar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div style="margin-bottom: 60px;">
+                <h2 style="font-size: 2rem; margin-bottom: 16px;">Preguntas Frecuentes sobre Dark Kitchens en Ñuñoa</h2>
+                <div class="faq-grid reveal" style="margin-top: 24px;">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i data-lucide="help-circle"></i>
+                            ¿Necesito permisos sanitarios para operar una dark kitchen?
+                        </div>
+                        <div class="faq-answer">
+                            Las cocinas disponibles en Kitchen Hub cuentan con habilitación sanitaria para operación gastronómica, facilitando el proceso para tu marca.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i data-lucide="help-circle"></i>
+                            ¿Cuánto cuesta arrendar una dark kitchen en Ñuñoa?
+                        </div>
+                        <div class="faq-answer">
+                            El valor depende del tamaño de la cocina, su equipamiento y los servicios incluidos. Te invitamos a comunicarte con nuestro asesores para recibir valores referenciales detallados.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i data-lucide="help-circle"></i>
+                            ¿Puedo operar más de una marca en la misma cocina?
+                        </div>
+                        <div class="faq-answer">
+                            Sí. Muchas marcas de delivery operan múltiples conceptos desde una misma cocina, maximizando la rentabilidad del espacio.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End of .post-content -->
+
+        <!-- Sidebar -->
+        <aside class="post-sidebar">
+            <h3>Kitchen Hub</h3>
+            <p>Conectamos operadores gastronómicos con los mejores espacios para delivery en Santiago.</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;">
+                <a href="#contacto" class="btn btn-gradient" style="width: 100%;">Contactar Asesor</a>
+                <a href="#cocinas-disponibles" class="btn btn-secondary" style="width: 100%;">Ver cocinas</a>
+            </div>
+
+            <div class="sidebar-links">
+                <h4>Otras Ubicaciones</h4>
+                <ul>
+                    <li><a href="dark-kitchen-vitacura.html"><i data-lucide="map-pin" style="width: 16px; height: 16px;"></i> Cocinas en Vitacura</a></li>
+                    <li><a href="#"><i data-lucide="map-pin" style="width: 16px; height: 16px;"></i> Cocinas en Las Condes</a></li>
+                    <li><a href="#"><i data-lucide="map-pin" style="width: 16px; height: 16px;"></i> Cocinas en Providencia</a></li>
+                </ul>
+            </div>
+        </aside>
     </section>
 
-    <!-- Features Section -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title reveal">Infraestructura para dark kitchens profesionales</h2>
-            <p class="section-subtitle reveal">Todo lo técnico y operativo resuelto para que te concentres en producir y
-                vender.</p>
-
-            <div class="features-grid">
-                <!-- Card 1 -->
-                <div class="feature-item reveal">
-                    <div class="feature-icon"><i data-lucide="wind"></i></div>
-                    <div>
-                        <h4>Sistema de extracción profesional</h4>
-                        <p>Campanas de acero inoxidable con motores independientes y ductos certificados al exterior,
-                            cumpliendo normativa sanitaria vigente.</p>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="feature-item reveal" style="transition-delay: 50ms;">
-                    <div class="feature-icon"><i data-lucide="droplet"></i></div>
-                    <div>
-                        <h4>Lavaplatos y lavafondos industriales</h4>
-                        <p>Instalaciones sanitarias completas con agua caliente y puntos de lavado diseñados para
-                            operaciones gastronómicas intensivas.</p>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="feature-item reveal" style="transition-delay: 100ms;">
-                    <div class="feature-icon"><i data-lucide="recycle"></i></div>
-                    <div>
-                        <h4>Gestión de residuos y reciclaje</h4>
-                        <p>Sistema organizado de retiro de basura, separación de residuos y reciclaje para mantener la
-                            operación limpia y ordenada.</p>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="feature-item reveal" style="transition-delay: 150ms;">
-                    <div class="feature-icon"><i data-lucide="droplets"></i></div>
-                    <div>
-                        <h4>Retiro de aceite usado</h4>
-                        <p>Gestión periódica de retiro de aceite de fritura mediante proveedores especializados que
-                            cumplen normas sanitarias y ambientales.</p>
-                    </div>
-                </div>
-                <!-- Card 5 -->
-                <div class="feature-item reveal" style="transition-delay: 200ms;">
-                    <div class="feature-icon"><i data-lucide="zap"></i></div>
-                    <div>
-                        <h4>Matriz eléctrica y gas normada</h4>
-                        <p>Capacidad eléctrica monofásica y trifásica junto a conexiones de gas certificadas, listas
-                            para equipamiento gastronómico.</p>
-                    </div>
-                </div>
-                <!-- Card 6 -->
-                <div class="feature-item reveal" style="transition-delay: 250ms;">
-                    <div class="feature-icon"><i data-lucide="truck"></i></div>
-                    <div>
-                        <h4>Logística y operación del hub</h4>
-                        <p>Áreas de carga y descarga, flujo eficiente para riders de delivery y servicio de runner que
-                            facilita la salida de pedidos.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Advantages / Growth Section -->
-    <section id="ventajas" class="section growth-section">
-        <!-- Video Background -->
-        <video autoplay muted loop playsinline class="bg-video">
-            <source src="./assets/growth_video_bg.mp4" type="video/mp4">
-        </video>
-        <div class="video-overlay"></div>
-
-        <div class="container growth-container">
-            <div class="growth-header reveal">
-                <h2 class="section-title">Ventajas de operar en una dark kitchen</h2>
-                <p class="section-subtitle">Las dark kitchens permiten lanzar o expandir una marca gastronómica con
-                    menos inversión, mayor velocidad y una operación optimizada.</p>
-            </div>
-
-            <div class="growth-grid">
-                <!-- Card 1 -->
-                <div class="growth-card reveal">
-                    <div class="growth-icon"><i data-lucide="piggy-bank"></i></div>
-                    <div class="growth-content">
-                        <h4>Menor inversión inicial</h4>
-                        <p>Evita los altos costos de habilitar un restaurante tradicional.</p>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="growth-card reveal" style="transition-delay: 100ms;">
-                    <div class="growth-icon"><i data-lucide="rocket"></i></div>
-                    <div class="growth-content">
-                        <h4>Apertura rápida</h4>
-                        <p>Comienza a producir en días en lugar de meses.</p>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="growth-card reveal" style="transition-delay: 200ms;">
-                    <div class="growth-icon"><i data-lucide="map-pinned"></i></div>
-                    <div class="growth-content">
-                        <h4>Ubicación estratégica para delivery</h4>
-                        <p>Opera desde zonas con alta demanda de pedidos.</p>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="growth-card reveal" style="transition-delay: 300ms;">
-                    <div class="growth-icon"><i data-lucide="trending-up"></i></div>
-                    <div class="growth-content">
-                        <h4>Modelo escalable</h4>
-                        <p>Expande tu producción a múltiples cocinas según crece tu marca.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI Assistant -->
-    <section class="section ai-section">
-        <div class="container reveal">
-            <div class="ai-card">
-                <div class="ai-content">
-                    <div class="bot-icon"><i data-lucide="bot"></i></div>
-                    <h2>Encuentra tu cocina ideal con IA</h2>
-                    <p style="color: var(--text-secondary); margin: 24px 0 40px; font-size: 1.125rem;">Nuestro asistente
-                        inteligente analiza tus requerimientos, tipo de menú y presupuesto para conectarte con el mejor
-                        espacio en segundos.</p>
-                    <button class="btn btn-gradient btn-lg chat-trigger-btn"
-                        style="padding: 16px 40px; font-size: 1.125rem;">
-                        <i data-lucide="sparkles"></i> Iniciar asistente IA
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 1: CAPTACIÓN DE OPERADORES (Brokerage) -->
-    <section class="section cta-publish" style="background: var(--bg-surface-elevated); padding-bottom: 80px;">
-        <div class="container reveal">
-            <div class="growth-header" style="margin-bottom: 40px;">
-                <h2 class="section-title">¿Tienes una dark kitchen disponible?</h2>
-                <p class="section-subtitle" style="margin-bottom: 40px;">Publica tu espacio en Kitchen Hub y conecta con
-                    marcas gastronómicas que buscan cocinas listas para operar. Nuestro sistema de exposición digital y
-                    recomendación inteligente ayuda a encontrar al arrendatario más adecuado para tu espacio.</p>
-            </div>
-
-            <div class="features-grid"
-                style="margin-bottom: 40px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-                <!-- Benefit 1 -->
-                <div class="feature-item reveal bg-surface">
-                    <div class="feature-icon" style="background: rgba(227, 6, 19, 0.1); color: var(--primary);"><i
-                            data-lucide="globe"></i></div>
-                    <div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Mayor exposición digital</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Tu cocina aparece frente a marcas
-                            gastronómicas activas que buscan espacios para operar.</p>
-                    </div>
-                </div>
-                <!-- Benefit 2 -->
-                <div class="feature-item reveal bg-surface" style="transition-delay: 100ms;">
-                    <div class="feature-icon" style="background: rgba(227, 6, 19, 0.1); color: var(--primary);"><i
-                            data-lucide="git-merge"></i></div>
-                    <div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Matching inteligente</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Nuestro sistema ayuda a conectar
-                            cada cocina con el tipo de marca más compatible.</p>
-                    </div>
-                </div>
-                <!-- Benefit 3 -->
-                <div class="feature-item reveal bg-surface" style="transition-delay: 200ms;">
-                    <div class="feature-icon" style="background: rgba(227, 6, 19, 0.1); color: var(--primary);"><i
-                            data-lucide="zap"></i></div>
-                    <div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Proceso comercial más eficiente</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Centralizamos la captación de leads
-                            y la presentación de tu espacio.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div style="text-align: center;">
-                <button class="btn btn-primary" style="padding: 16px 32px; font-size: 1.1rem;"
-                    data-modal="modal-publish">
-                    <i data-lucide="building-2"></i> Publicar mi espacio
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 2: CONTACT / SOCIAL AREA -->
+    <!-- CONTACT AREA -->
     <section id="contacto" class="section contact-section">
         <div class="container contact-wrapper">
             <div class="contact-info reveal">
-                <h2 style="font-size: 2.5rem; margin-bottom: 16px;">¿Listo para encontrar tu próxima cocina?</h2>
+                <h2 style="font-size: 2.5rem; margin-bottom: 16px;">Encuentra la dark kitchen ideal para tu marca gastronómica en Ñuñoa.</h2>
                 <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 40px;">Déjanos tus datos y un
-                    asesor gastronómico te ayudará a encontrar el espacio ideal para tu operación.</p>
+                    asesor gastronómico te guiará para conseguir el mejor espacio para tu marca de delivery.</p>
 
                 <div style="display: flex; flex-direction: column; gap: 24px; margin-bottom: 40px;">
                     <div
@@ -562,7 +492,7 @@
                     </div>
 
                     <div style="margin-top: 8px;">
-                        <a href="https://wa.me/56930935523?text=Hola%20estoy%20en%20busqueda%20de%20una%20Dark%20Kitchen%20para%20mi%20marca"
+                        <a href="https://wa.me/56930935523?text=Hola%20estoy%20en%20busqueda%20de%20una%20Dark%20Kitchen%20en%20Nunoa%20para%20mi%20marca"
                             target="_blank" rel="noopener noreferrer" class="btn btn-primary"
                             style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; font-weight: 600;">
                             <i data-lucide="message-circle" style="width: 20px; height: 20px;"></i>
@@ -571,32 +501,12 @@
                     </div>
                 </div>
 
-                <div style="margin-top: auto;">
-                    <p style="color: var(--text-secondary); margin-bottom: 16px; font-weight: 500;">Síguenos para
-                        conocer nuevos espacios disponibles, aperturas y oportunidades dentro de la red Kitchen Hub.</p>
-                    <div style="display: flex; gap: 16px;">
-                        <a href="#"
-                            style="color: var(--text-secondary); background: rgba(255,255,255,0.05); padding: 12px; border-radius: 50%; transition: var(--transition); display: flex; align-items: center; justify-content: center;"
-                            onmouseover="this.style.color='var(--primary)'; this.style.background='rgba(227,6,19,0.1)'"
-                            onmouseout="this.style.color='var(--text-secondary)'; this.style.background='rgba(255,255,255,0.05)'"><i
-                                data-lucide="instagram"></i></a>
-                        <a href="#"
-                            style="color: var(--text-secondary); background: rgba(255,255,255,0.05); padding: 12px; border-radius: 50%; transition: var(--transition); display: flex; align-items: center; justify-content: center;"
-                            onmouseover="this.style.color='var(--primary)'; this.style.background='rgba(227,6,19,0.1)'"
-                            onmouseout="this.style.color='var(--text-secondary)'; this.style.background='rgba(255,255,255,0.05)'"><i
-                                data-lucide="linkedin"></i></a>
-                        <a href="#"
-                            style="color: var(--text-secondary); background: rgba(255,255,255,0.05); padding: 12px; border-radius: 50%; transition: var(--transition); display: flex; align-items: center; justify-content: center;"
-                            onmouseover="this.style.color='var(--primary)'; this.style.background='rgba(227,6,19,0.1)'"
-                            onmouseout="this.style.color='var(--text-secondary)'; this.style.background='rgba(255,255,255,0.05)'"><i
-                                data-lucide="youtube"></i></a>
-                    </div>
-                </div>
             </div>
 
             <div class="form-container reveal">
                 <form id="contactForm" class="contact-form" action="https://formspree.io/f/xjgawyjw" method="POST"
                     style="background: var(--bg-surface-elevated); border-radius: 24px; border: 1px solid rgba(255,255,255,0.05);">
+                    <input type="hidden" name="origen" value="Landing_Nunoa">
                     <div class="form-group">
                         <label for="name">Nombre completo</label>
                         <input type="text" id="name" name="nombre_completo" class="form-control"
@@ -658,197 +568,7 @@
     </footer>
 
     <!-- Modals -->
-    <!-- Modal: Vitacura -->
-    <div id="modal-vitacura" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-header">
-                <h2>Kitchen Hub Vitacura</h2>
-                <p class="modal-subtitle">Módulos disponibles para marcas gastronómicas que buscan operar con rapidez y
-                    respaldo operativo.</p>
-            </div>
-
-            <div class="modal-body">
-                <div class="modal-section">
-                    <h3><i data-lucide="info"></i> Información general</h3>
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="info-label">Dirección</span>
-                            <span class="info-value">Geronimo de Alderete #1121</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Horario de funcionamiento</span>
-                            <span class="info-value">09:00 a 23:00</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Estado</span>
-                            <span class="badge badge-success">Disponible</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-section">
-                    <h3><i data-lucide="layout-grid"></i> Módulos disponibles</h3>
-                    <div class="modules-list">
-                        <div class="module-card">
-                            <h4>Módulo 1</h4>
-                            <div class="module-specs">
-                                <span><i data-lucide="maximize"></i> Superficie: 11 m²</span>
-                                <span class="badge badge-success">Estado: Disponible</span>
-                            </div>
-                        </div>
-                        <div class="module-card">
-                            <h4>Módulo 2</h4>
-                            <div class="module-specs">
-                                <span><i data-lucide="maximize"></i> Superficie: 12,35 m²</span>
-                                <span class="badge badge-success">Estado: Disponible</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-section">
-                    <h3><i data-lucide="package"></i> Cada módulo de cocina incluye</h3>
-                    <ul class="features-list">
-                        <li><i data-lucide="check"></i> Electricidad monofásica y trifásica</li>
-                        <li><i data-lucide="check"></i> Sistema de extracción de aire</li>
-                        <li><i data-lucide="check"></i> Campana de acero inoxidable</li>
-                        <li><i data-lucide="check"></i> Trampa de grasa</li>
-                        <li><i data-lucide="check"></i> Lavamanos</li>
-                        <li><i data-lucide="check"></i> Lavafondos</li>
-                        <li><i data-lucide="check"></i> Punto de red</li>
-                        <li><i data-lucide="check"></i> Citofonía</li>
-                    </ul>
-                </div>
-
-                <div class="modal-grid-2">
-                    <div class="modal-section">
-                        <h3><i data-lucide="users"></i> Operación</h3>
-                        <ul class="features-list">
-                            <li><i data-lucide="check"></i> Zona de Check Out</li>
-                            <li><i data-lucide="check"></i> Runner</li>
-                            <li><i data-lucide="check"></i> Personal dedicado</li>
-                        </ul>
-                    </div>
-                    <div class="modal-section">
-                        <h3><i data-lucide="shield-check"></i> Seguridad</h3>
-                        <ul class="features-list">
-                            <li><i data-lucide="check"></i> Sistema de alarma</li>
-                            <li><i data-lucide="check"></i> Cámaras de seguridad</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="modal-section">
-                    <h3><i data-lucide="wrench"></i> Mantención</h3>
-                    <ul class="features-list">
-                        <li><i data-lucide="check"></i> Limpieza de baños</li>
-                        <li><i data-lucide="check"></i> Limpieza de zonas comunes</li>
-                        <li><i data-lucide="check"></i> Fumigación y control de plagas mensual</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="modal-footer">
-                <a href="#" class="btn btn-secondary close-modal-btn chat-trigger-btn">Solicitar información</a>
-                <a href="#contacto" class="btn btn-primary close-modal-btn">Agendar visita</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal: Las Condes -->
-    <div id="modal-las-condes" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-header">
-                <h2>Kitchen Hub Las Condes</h2>
-                <p class="modal-subtitle">Cocina profesional disponible para marcas gastronómicas listas para operar.
-                </p>
-            </div>
-
-            <div class="modal-body">
-                <div class="modal-section">
-                    <h3><i data-lucide="info"></i> Información general</h3>
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="info-label">Dirección</span>
-                            <span class="info-value contenteditable-field" contenteditable="true"
-                                data-placeholder="[Ingresar dirección]">[dejar campo editable]</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Horario de funcionamiento</span>
-                            <span class="info-value contenteditable-field" contenteditable="true"
-                                data-placeholder="[Ingresar horario]">[dejar campo editable]</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Estado</span>
-                            <span class="badge badge-success">Disponible</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-section">
-                    <h3><i data-lucide="layout-grid"></i> Módulos disponibles</h3>
-                    <div class="modules-list">
-                        <div class="module-card">
-                            <h4>Módulo 3</h4>
-                            <div class="module-specs">
-                                <span><i data-lucide="maximize"></i> Superficie: 16,25 m²</span>
-                                <span class="badge badge-success">Estado: Disponible</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-section">
-                    <h3><i data-lucide="package"></i> Cada módulo de cocina incluye</h3>
-                    <ul class="features-list">
-                        <li><i data-lucide="check"></i> Electricidad monofásica y trifásica</li>
-                        <li><i data-lucide="check"></i> Sistema de extracción de aire</li>
-                        <li><i data-lucide="check"></i> Campana de acero inoxidable</li>
-                        <li><i data-lucide="check"></i> Trampa de grasa</li>
-                        <li><i data-lucide="check"></i> Lavamanos</li>
-                        <li><i data-lucide="check"></i> Lavafondos</li>
-                        <li><i data-lucide="check"></i> Punto de red</li>
-                        <li><i data-lucide="check"></i> Citofonía</li>
-                    </ul>
-                </div>
-
-                <div class="modal-grid-2">
-                    <div class="modal-section">
-                        <h3><i data-lucide="users"></i> Operación</h3>
-                        <ul class="features-list">
-                            <li><i data-lucide="check"></i> Zona de Check Out</li>
-                            <li><i data-lucide="check"></i> Runner</li>
-                            <li><i data-lucide="check"></i> Personal dedicado</li>
-                        </ul>
-                    </div>
-                    <div class="modal-section">
-                        <h3><i data-lucide="shield-check"></i> Seguridad</h3>
-                        <ul class="features-list">
-                            <li><i data-lucide="check"></i> Sistema de alarma</li>
-                            <li><i data-lucide="check"></i> Cámaras de seguridad</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="modal-section">
-                    <h3><i data-lucide="wrench"></i> Mantención</h3>
-                    <ul class="features-list">
-                        <li><i data-lucide="check"></i> Limpieza de baños</li>
-                        <li><i data-lucide="check"></i> Limpieza de zonas comunes</li>
-                        <li><i data-lucide="check"></i> Fumigación y control de plagas mensual</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="modal-footer">
-                <a href="#" class="btn btn-secondary close-modal-btn chat-trigger-btn">Solicitar información</a>
-                <a href="#contacto" class="btn btn-primary close-modal-btn">Agendar visita</a>
-            </div>
-        </div>
-    </div>
-
+    <!-- Modal: Ñuñoa Landing -->
     <!-- Modal: Ñuñoa 1 -->
     <div id="modal-nunoa-1" class="modal">
         <div class="modal-content">
@@ -1210,6 +930,8 @@
         </div>
     </div>
 
+
+
     <!-- Kitchen Hub AI Agent Widget -->
     <div id="kh-chat-root">
         <button id="kh-chat-toggle" aria-label="Abrir chat Kitchen Hub">
@@ -1253,6 +975,76 @@
     <script src="main.js"></script>
     <script>
         lucide.createIcons();
+    </script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var mapContainer = document.getElementById('nunoa-map');
+            if (mapContainer) {
+                // Initialize map centered on Ñuñoa
+                var map = L.map('nunoa-map', {
+                    scrollWheelZoom: false // Prevent accidental zooming when scrolling the page
+                }).setView([-33.4569, -70.5982], 13);
+
+                // Add CartoDB Dark Matter tile layer to match dark theme
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                    subdomains: 'abcd',
+                    maxZoom: 20
+                }).addTo(map);
+
+                // Slightly increase contrast and brightness of the map tiles for better visibility
+                map.getPane('tilePane').style.filter = 'brightness(1.15) contrast(1.2)';
+
+                // Map legend for coverage radius
+                var legend = L.control({position: 'bottomleft'});
+                legend.onAdd = function (map) {
+                    var div = L.DomUtil.create('div', 'info legend');
+                    div.innerHTML = '<div style="background: rgba(15, 23, 42, 0.9); padding: 10px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); color: #e2e8f0; display: flex; align-items: center; gap: 10px; font-size: 0.875rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);"><div style="width: 16px; height: 16px; border-radius: 50%; background: rgba(16, 185, 129, 0.2); border: 2px solid #10B981;"></div><span>Radio aproximado de cobertura para delivery (3 km)</span></div>';
+                    return div;
+                };
+                legend.addTo(map);
+
+                // Custom marker icons
+                var redIcon = L.icon({
+                    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+                    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                    iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
+                });
+                var greyIcon = L.icon({
+                    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png',
+                    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                    iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
+                });
+
+                // Add pins for available dark kitchens
+                var kitchens = [
+                    { lat: -33.4569, lng: -70.5982, title: 'Espacio Kitchen Hub - Ñuñoa Central', available: true }
+                ];
+
+                kitchens.forEach(function(k) {
+                    // Add 3km coverage radius in green
+                    L.circle([k.lat, k.lng], {
+                        color: '#10B981',
+                        fillColor: '#10B981',
+                        fillOpacity: 0.15,
+                        weight: 2,
+                        radius: 3000 // 3 km expressed in meters
+                    }).addTo(map);
+
+                    // Determine status text and icon color
+                    var statusText = k.available ? 'Módulo disponible para arrendar.' : 'Sin módulos disponibles.';
+                    var markerIcon = k.available ? redIcon : greyIcon;
+
+                    // Add the pin
+                    L.marker([k.lat, k.lng], {icon: markerIcon})
+                        .addTo(map)
+                        .bindPopup('<strong style="color: #333;">' + k.title + '</strong><br><span style="color: #666;">' + statusText + '</span>');
+                });
+            }
+        });
     </script>
 </body>
 
