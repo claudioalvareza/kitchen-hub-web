@@ -749,6 +749,95 @@ html, body {
     .slide-closing .slide-title { font-size: 2.5rem !important; }
     .cta-buttons { flex-direction: column; }
     .chat-mockup { max-width: 100%; padding: 20px 15px; }
+    .funnel-container { padding: 20px; }
+    .funnel-step { padding: 12px 16px; margin-bottom: 8px; }
+    .funnel-number { font-size: 1.2rem; }
     .pitch-slide { height: auto; min-height: 100vh; padding: 100px 0; }
     .pitch-container { scroll-snap-type: none; overflow-y: auto; }
 }
+
+/* AI Funnel Graphic Styles */
+.funnel-wrapper {
+    background-image: url('./assets/technology-integrated-everyday-life.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    height: 100%;
+}
+.funnel-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10, 10, 12, 0.85); /* Dark overlay */
+}
+.funnel-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.funnel-step {
+    background: rgba(20, 20, 25, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 16px 24px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+.funnel-step .funnel-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.funnel-icon {
+    width: 36px; height: 36px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-secondary);
+}
+.funnel-text {
+    font-size: 0.95rem;
+    color: white;
+    font-weight: 500;
+}
+.funnel-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-muted);
+}
+/* Widths for Funnel Shape */
+.funnel-step.step-1 { width: 100%; }
+.funnel-step.step-2 { width: 85%; }
+.funnel-step.step-3 { width: 70%; }
+.funnel-step.step-4 { 
+    width: 55%; 
+    background: linear-gradient(135deg, rgba(227, 6, 19, 0.2), rgba(227, 6, 19, 0.05));
+    border-color: rgba(227, 6, 19, 0.5);
+}
+.funnel-step.step-4 .funnel-icon {
+    background: var(--primary);
+    color: white;
+}
+.funnel-step.step-4 .funnel-number {
+    color: var(--primary);
+}
+
+/* Funnel Animation Logic */
+.funnel-container .funnel-step {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+}
+.scroll-reveal.active .funnel-step.step-1 { opacity: 1; transform: translateY(0) scale(1); transition-delay: 300ms; }
+.scroll-reveal.active .funnel-step.step-2 { opacity: 1; transform: translateY(0) scale(1); transition-delay: 600ms; }
+.scroll-reveal.active .funnel-step.step-3 { opacity: 1; transform: translateY(0) scale(1); transition-delay: 900ms; }
+.scroll-reveal.active .funnel-step.step-4 { opacity: 1; transform: translateY(0) scale(1); transition-delay: 1200ms; }
